@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
+     <nav>
         <div class="logo">Jaydip Gohil</div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
@@ -24,31 +24,113 @@
         <div class="hamburger">☰</div>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home">
-        <div class="home-content">
-            <h1>Jaydip Gohil | Python Developer & AI Enthusiast</h1>
-            <h2>Crafting Innovative Solutions with AI, Machine Learning, and Computer Vision</h2>
-            <p>I’m Jaydip Gohil, a final-year B.Tech Computer Science (AI) student at ITM SLS Baroda University, with a CGPA of 9.13. As a Python Developer Intern at Lycka Infolab Pvt. Ltd. and IOM Site, I build AI-driven applications and real-time image processing systems. Passionate about solving complex problems, I’ve developed projects like sentiment analysis tools and object detection systems, and I’m committed to advancing technology through continuous learning.</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn">Explore My Projects</a>
-                <a href="#contact" class="btn">Contact Me</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I’m Jaydip Gohil, a final-year B.Tech Computer Science (AI) student at ITM SLS Baroda University, Baroda, India, with a CGPA of 9.13 (7th semester, 8th ongoing). My fascination with technology began during my Class XII studies at Jawahar Navodaya Vidyalaya, Bharuch (79%, 2021), where I developed a strong foundation in science and problem-solving. Today, I specialize in AI, machine learning, and computer vision, driven by a passion to create impactful solutions. As a Python Developer Intern at Lycka Infolab Pvt. Ltd. and IOM Site, I work on automation, real-time image processing, and AI-driven applications. My projects, such as the YouTube Comments Sentiment Analysis Tool and AI-Powered Image Stitching System, showcase my ability to apply theoretical knowledge to practical challenges. I actively participate in hackathons, contribute to open-source projects on GitHub, and pursue certifications to stay ahead in emerging technologies. My goal is to become a leading AI/ML engineer, developing innovative solutions for industries like healthcare, finance, and automation. Beyond coding, I enjoy collaborating with peers and exploring the latest tech trends to fuel my growth.</p>
-        <p><strong>Career Goals:</strong> Aspire to lead advancements in AI and machine learning, creating scalable solutions for real-world challenges in automation, healthcare, and beyond.</p>
-        <h3>Education</h3>
-        <ul>
-            <li>ITM SLS Baroda University: B.Tech Computer Science (AI), 08/2021–04/2025, CGPA 9.13</li>
-            <li>Jawahar Navodaya Vidyalaya, Bharuch: Class XII (PCM), 01/2020–05/2021, 79%</li>
-        </ul>
-        <a href="#" class="btn">Download My Resume</a>
-    </section>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-main hero-split">
+            <div class="home-content glass-hero fadein left-col">
+                <div class="home-header">
+                  <span class="ai-avatar" aria-hidden="true">🤖</span>
+                  <h1>
+                    <span class="highlight">Jaydip Gohil</span>
+                    <span class="title-bar" aria-hidden="true">|</span>
+                    <span class="dev-title">Python Developer</span>
+                    <span class="and" aria-hidden="true">&</span>
+                    <span class="ai-accent">AI Enthusiast</span>
+                  </h1>
+                </div>
+                <h2 class="hero-slogan">
+                    Crafting <span class="fancy">Innovative Solutions</span> with
+                    <span class="ml-highlight">AI</span>, <span class="ml-highlight">Machine Learning</span> &amp;
+                    <span class="ml-highlight">Computer Vision</span>
+                </h2>
+                <p class="hero-bio">
+                    I’m <span class="bio-strong">Jaydip Gohil</span>, final-year B.Tech Computer Science (AI) student at
+                    <span class="bio-strong">ITM SLS Baroda University</span> (CGPA: 9.13). Currently a Python Developer Intern at
+                    <span class="bio-strong">Lycka Infolab Pvt. Ltd.</span> and <span class="bio-strong">IOM Site</span>—building AI-driven apps and real-time image processing systems.<br /><br />
+                    <span class="bio-glow">Passionate about complex problem solving</span>, from
+                    <span class="bio-glow">sentiment analysis</span> to <span class="bio-glow">object detection</span>. I’m committed to
+                    <span class="highlight">continuous learning</span> and driving the future with technology.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn cta-glow" role="button" tabindex="0">🚀 Explore My Projects</a>
+                    <a href="#contact" class="btn cta-outline" role="button" tabindex="0">✉️ Contact Me</a>
+                </div>
+            </div>
+            <div class="right-col hero-svg fadein-right" aria-hidden="true">
+              <!-- Animated SVG illustration: Coding at a computer with blue tech mood -->
+              <svg id="hero-anim-svg" viewBox="0 0 300 300" width="300" height="300" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 98vw">
+                <defs>
+                  <linearGradient id="paint0" x1="120" y1="30" x2="260" y2="270" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#45b0e3"/>
+                    <stop offset="1" stop-color="#001839"/>
+                  </linearGradient>
+                  <linearGradient id="avatarSkin" x1="120" y1="90" x2="170" y2="170" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#eef3fa"/>
+                    <stop offset="1" stop-color="#b8cedf"/>
+                  </linearGradient>
+                </defs>
+                <!-- Desk -->
+                <rect x="60" y="220" width="180" height="18" rx="8" fill="#22507a" opacity="0.92"/>
+                <!-- Monitor -->
+                <rect x="120" y="100" width="60" height="42" rx="8" fill="url(#paint0)"/>
+                <rect x="142" y="138" width="16" height="4" rx="2" fill="#0d2b3e" />
+                <!-- Body -->
+                <ellipse cx="150" cy="186" rx="24" ry="28" fill="#2377bb"/>
+                <!-- Head -->
+                <ellipse cx="170" cy="95" rx="17" ry="16" fill="url(#avatarSkin)"/>
+                <ellipse cx="170" cy="95" rx="17" ry="16" fill="#b1c8e0" fill-opacity="0.085"/>
+                <!-- Arms -->
+                <path id="anim-arm1" d="M165 120 Q162 146 139 150" stroke="#9dc0e2" stroke-width="7" stroke-linecap="round" fill="none"/>
+                <path id="anim-arm2" d="M175 120 Q185 140 210 150" stroke="#9dc0e2" stroke-width="7" stroke-linecap="round" fill="none"/>
+                <!-- Hands on keyboard -->
+                <ellipse cx="136" cy="154" rx="6" ry="3" fill="#eef3fa"/>
+                <ellipse cx="216" cy="154" rx="6" ry="3" fill="#eef3fa"/>
+                <!-- Laptop -->
+                <rect x="120" y="162" width="60" height="16" rx="3" fill="#195783"/>
+                <!-- Accent circuit lines (AI/tech) -->
+                <polyline points="180,110 210,98 225,125 195,138" stroke="#55e2ff" stroke-width="2" fill="none" opacity="0.54">
+                  <animate attributeName="stroke-dasharray" values="0,24;24,0;0,24" dur="2.6s" repeatCount="indefinite" />
+                </polyline>
+                <polyline points="120,120 80,95 60,140 120,155" stroke="#76e6ee" stroke-width="2" fill="none" opacity="0.4">
+                  <animate attributeName="stroke-dasharray" values="0,28;28,0;0,28" dur="3s" repeatCount="indefinite" />
+                </polyline>
+                <!-- Subtle background blur shapes -->
+                <ellipse cx="100" cy="50" rx="32" ry="18" fill="#4ebfff99" opacity="0.18"/>
+                <ellipse cx="220" cy="70" rx="44" ry="20" fill="#e1f6ff" opacity="0.09"/>
+              </svg>
+            </div>
+            <div class="hero-lights" aria-hidden="true"></div>
+        </section>
+
+     <!-- About Section -->
+        <section id="about" class="about-main about-glass fadein-section visible" tabindex="0" aria-label="About Me">
+            <div class="about-header">
+                <span class="about-icon" aria-hidden="true">👨‍💻</span>
+                <h2>About Me</h2>
+                <div class="about-underline"></div>
+            </div>
+            <div class="about-bio">
+                <p>I’m <span class="bio-strong">Jaydip Gohil</span>, a final-year <strong>B.Tech Computer Science (AI)</strong> student at ITM SLS Baroda University, India, with a CGPA of 9.13 (7th semester, 8th ongoing). My fascination with technology began in my school days at Jawahar Navodaya Vidyalaya, Bharuch (79%, 2021), where I developed a strong foundation in science and problem-solving.<br><br>
+                Today, I specialize in <span class="ml-highlight">AI</span>, <span class="ml-highlight">machine learning</span>, and <span class="ml-highlight">computer vision</span>, driven by a passion to create impactful solutions. As a Python Developer Intern at <strong>Lycka Infolab Pvt. Ltd.</strong> and <strong>IOM Site</strong>, I work on automation, real-time image processing, and AI-driven applications.<br><br>
+                My projects—like the YouTube Comments Sentiment Analysis Tool and AI-Powered Image Stitching System—showcase my ability to apply theoretical knowledge to practical challenges. I actively participate in hackathons, contribute to open source on GitHub, and pursue certifications to stay ahead in tech. My goal: become a leading AI/ML engineer, developing innovative solutions for industries like healthcare, finance, and automation.<br><br>
+                Beyond coding, I enjoy collaborating with peers and exploring the latest tech trends to fuel my growth.
+                </p>
+                <div class="about-career-goals">
+                    <span class="goals-emoji" aria-hidden="true">🚀</span>
+                    <span><strong>Career Goals:</strong> Aspire to lead advancements in AI and machine learning, creating scalable solutions for real-world challenges in automation, healthcare, and beyond.</span>
+                </div>
+            </div>
+            <div class="about-divider" aria-hidden="true"></div>
+            <div class="about-education">
+                <h3><span class="edu-icon" aria-hidden="true">🎓</span> Education</h3>
+                <ul>
+                    <li><strong>ITM SLS Baroda University:</strong> B.Tech Computer Science (AI), 08/2021–04/2025, CGPA 9.13</li>
+                    <li><strong>Jawahar Navodaya Vidyalaya, Bharuch:</strong> Class XII (PCM), 01/2020–05/2021, 79%</li>
+                </ul>
+            </div>
+            <a href="#" class="btn cta-glow about-resume" download="JaydipGohil-Resume.pdf" role="button" tabindex="0" aria-label="Download My Resume">⬇️ Download My Resume</a>
+        </section>
 
     <!-- Skills Section -->
     <section id="skills">

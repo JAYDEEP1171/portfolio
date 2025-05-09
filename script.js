@@ -1,47 +1,64 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
-
-  hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-  });
-
-  const contactForm = document.querySelector('#contact-form');
-  contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = contactForm.querySelector('input[name="name"]').value;
-      const email = contactForm.querySelector('input[name="email"]').value;
-      const message = contactForm.querySelector('textarea[name="message"]').value;
-
-      if (name && email && message) {
-          alert('Thank you for your message! I’ll get back to you soon.');
-          contactForm.reset();
-      } else {
-          alert('Please fill out all fields.');
-      }
+// Hamburger menu logic
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+});
+// Close mobile menu after clicking any link
+document.querySelectorAll(".nav-links a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
   });
 });
-
-
-const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-        const nav = document.querySelector('nav');
-
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+// Sticky nav shadow effect
+window.addEventListener("scroll", () => {
+  document
+    .querySelector("nav")
+    .classList.toggle("scrolled", window.scrollY > 8);
+});
+// Smooth scroll
+document.querySelectorAll(".nav-links a").forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    if (this.hash) {
+      e.preventDefault();
+      const section = document.querySelector(this.hash);
+      if (section) {
+        window.scrollTo({
+          top: section.offsetTop - 58,
+          behavior: "smooth",
         });
+      }
+    }
+  });
+});
+// Highlight nav link on scroll
+const sections = document.querySelectorAll("main section");
+const navItems = document.querySelectorAll(".nav-links li");
+function activateNavLink() {
+  let index = sections.length;
+  while (--index && window.scrollY + 100 < sections[index].offsetTop) {}
+  navItems.forEach((li) => li.classList.remove("active"));
+  if (navItems[index]) navItems[index].classList.add("active");
+}
+window.addEventListener("scroll", activateNavLink);
+activateNavLink();
 
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
-        });
+// On-scroll fade-in for about section
+const aboutSection = document.querySelector("#about");
+function checkAboutVisibility() {
+  const rect = aboutSection.getBoundingClientRect();
+  const windowHeight =
+    window.innerHeight || document.documentElement.clientHeight;
+  if (rect.top <= windowHeight * 0.85) {
+    aboutSection.classList.add("visible");
+    window.removeEventListener("scroll", checkAboutVisibility);
+  }
+}
+window.addEventListener("scroll", checkAboutVisibility);
+// Initial check in case already visible
+checkAboutVisibility();
 
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
+// Find About section
+if (aboutSection) {
+  aboutSection.classList.add('visible'); // Always show
+}
