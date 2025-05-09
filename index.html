@@ -1,333 +1,735 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jaydip Gohil | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- Navigation -->
-     <nav>
-        <div class="logo">Jaydip Gohil</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#blog">Blog</a></li>
-        </ul>
-        <div class="hamburger">☰</div>
+    <nav>
+      <div class="logo">Jaydip Gohil</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#blog">Blog</a></li>
+      </ul>
+      <div class="hamburger">☰</div>
     </nav>
-
-
 
     <!-- Home Section -->
     <section id="home" class="hero-main hero-split">
-            <div class="home-content glass-hero fadein left-col">
-                <div class="home-header">
-                  <span class="ai-avatar" aria-hidden="true">🤖</span>
-                  <h1>
-                    <span class="highlight">Jaydip Gohil</span>
-                    <span class="title-bar" aria-hidden="true">|</span>
-                    <span class="dev-title">Python Developer</span>
-                    <span class="and" aria-hidden="true">&</span>
-                    <span class="ai-accent">AI Enthusiast</span>
-                  </h1>
-                </div>
-                <h2 class="hero-slogan">
-                    Crafting <span class="fancy">Innovative Solutions</span> with
-                    <span class="ml-highlight">AI</span>, <span class="ml-highlight">Machine Learning</span> &amp;
-                    <span class="ml-highlight">Computer Vision</span>
-                </h2>
-                <p class="hero-bio">
-                    I’m <span class="bio-strong">Jaydip Gohil</span>, final-year B.Tech Computer Science (AI) student at
-                    <span class="bio-strong">ITM SLS Baroda University</span> (CGPA: 9.13). Currently a Python Developer Intern at
-                    <span class="bio-strong">Lycka Infolab Pvt. Ltd.</span> and <span class="bio-strong">IOM Site</span>—building AI-driven apps and real-time image processing systems.<br /><br />
-                    <span class="bio-glow">Passionate about complex problem solving</span>, from
-                    <span class="bio-glow">sentiment analysis</span> to <span class="bio-glow">object detection</span>. I’m committed to
-                    <span class="highlight">continuous learning</span> and driving the future with technology.
-                </p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn cta-glow" role="button" tabindex="0">🚀 Explore My Projects</a>
-                    <a href="#contact" class="btn cta-outline" role="button" tabindex="0">✉️ Contact Me</a>
-                </div>
-            </div>
-            <div class="right-col hero-svg fadein-right" aria-hidden="true">
-              <!-- Animated SVG illustration: Coding at a computer with blue tech mood -->
-              <svg id="hero-anim-svg" viewBox="0 0 300 300" width="300" height="300" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 98vw">
-                <defs>
-                  <linearGradient id="paint0" x1="120" y1="30" x2="260" y2="270" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#45b0e3"/>
-                    <stop offset="1" stop-color="#001839"/>
-                  </linearGradient>
-                  <linearGradient id="avatarSkin" x1="120" y1="90" x2="170" y2="170" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#eef3fa"/>
-                    <stop offset="1" stop-color="#b8cedf"/>
-                  </linearGradient>
-                </defs>
-                <!-- Desk -->
-                <rect x="60" y="220" width="180" height="18" rx="8" fill="#22507a" opacity="0.92"/>
-                <!-- Monitor -->
-                <rect x="120" y="100" width="60" height="42" rx="8" fill="url(#paint0)"/>
-                <rect x="142" y="138" width="16" height="4" rx="2" fill="#0d2b3e" />
-                <!-- Body -->
-                <ellipse cx="150" cy="186" rx="24" ry="28" fill="#2377bb"/>
-                <!-- Head -->
-                <ellipse cx="170" cy="95" rx="17" ry="16" fill="url(#avatarSkin)"/>
-                <ellipse cx="170" cy="95" rx="17" ry="16" fill="#b1c8e0" fill-opacity="0.085"/>
-                <!-- Arms -->
-                <path id="anim-arm1" d="M165 120 Q162 146 139 150" stroke="#9dc0e2" stroke-width="7" stroke-linecap="round" fill="none"/>
-                <path id="anim-arm2" d="M175 120 Q185 140 210 150" stroke="#9dc0e2" stroke-width="7" stroke-linecap="round" fill="none"/>
-                <!-- Hands on keyboard -->
-                <ellipse cx="136" cy="154" rx="6" ry="3" fill="#eef3fa"/>
-                <ellipse cx="216" cy="154" rx="6" ry="3" fill="#eef3fa"/>
-                <!-- Laptop -->
-                <rect x="120" y="162" width="60" height="16" rx="3" fill="#195783"/>
-                <!-- Accent circuit lines (AI/tech) -->
-                <polyline points="180,110 210,98 225,125 195,138" stroke="#55e2ff" stroke-width="2" fill="none" opacity="0.54">
-                  <animate attributeName="stroke-dasharray" values="0,24;24,0;0,24" dur="2.6s" repeatCount="indefinite" />
-                </polyline>
-                <polyline points="120,120 80,95 60,140 120,155" stroke="#76e6ee" stroke-width="2" fill="none" opacity="0.4">
-                  <animate attributeName="stroke-dasharray" values="0,28;28,0;0,28" dur="3s" repeatCount="indefinite" />
-                </polyline>
-                <!-- Subtle background blur shapes -->
-                <ellipse cx="100" cy="50" rx="32" ry="18" fill="#4ebfff99" opacity="0.18"/>
-                <ellipse cx="220" cy="70" rx="44" ry="20" fill="#e1f6ff" opacity="0.09"/>
-              </svg>
-            </div>
-            <div class="hero-lights" aria-hidden="true"></div>
-        </section>
+      <div class="home-content glass-hero fadein left-col">
+        <div class="home-header">
+          <span class="ai-avatar" aria-hidden="true">🤖</span>
+          <h1>
+            <span class="highlight">Jaydip Gohil</span>
+            <span class="title-bar" aria-hidden="true">|</span>
+            <span class="dev-title">Python Developer</span>
+            <span class="and" aria-hidden="true">&</span>
+            <span class="ai-accent">AI Enthusiast</span>
+          </h1>
+        </div>
+        <h2 class="hero-slogan">
+          Crafting <span class="fancy">Innovative Solutions</span> with
+          <span class="ml-highlight">AI</span>,
+          <span class="ml-highlight">Machine Learning</span> &amp;
+          <span class="ml-highlight">Computer Vision</span>
+        </h2>
+        <p class="hero-bio">
+          I’m <span class="bio-strong">Jaydip Gohil</span>, final-year B.Tech
+          Computer Science (AI) student at
+          <span class="bio-strong">ITM SLS Baroda University</span> (CGPA:
+          9.13). Currently a Python Developer Intern at
+          <span class="bio-strong">Lycka Infolab Pvt. Ltd.</span> and
+          <span class="bio-strong">IOM Site</span>—building AI-driven apps and
+          real-time image processing systems.<br /><br />
+          <span class="bio-glow">Passionate about complex problem solving</span
+          >, from <span class="bio-glow">sentiment analysis</span> to
+          <span class="bio-glow">object detection</span>. I’m committed to
+          <span class="highlight">continuous learning</span> and driving the
+          future with technology.
+        </p>
+        <div class="cta-buttons">
+          <a href="#projects" class="btn cta-glow" role="button" tabindex="0"
+            >🚀 Explore My Projects</a
+          >
+          <a href="#contact" class="btn cta-outline" role="button" tabindex="0"
+            >✉️ Contact Me</a
+          >
+        </div>
+      </div>
+      <div class="right-col hero-svg fadein-right" aria-hidden="true">
+        <!-- Animated SVG illustration: Coding at a computer with blue tech mood -->
+        <svg
+          id="hero-anim-svg"
+          viewBox="0 0 300 300"
+          width="300"
+          height="300"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style="max-width: 98vw"
+        >
+          <defs>
+            <linearGradient
+              id="paint0"
+              x1="120"
+              y1="30"
+              x2="260"
+              y2="270"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#45b0e3" />
+              <stop offset="1" stop-color="#001839" />
+            </linearGradient>
+            <linearGradient
+              id="avatarSkin"
+              x1="120"
+              y1="90"
+              x2="170"
+              y2="170"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#eef3fa" />
+              <stop offset="1" stop-color="#b8cedf" />
+            </linearGradient>
+          </defs>
+          <!-- Desk -->
+          <rect
+            x="60"
+            y="220"
+            width="180"
+            height="18"
+            rx="8"
+            fill="#22507a"
+            opacity="0.92"
+          />
+          <!-- Monitor -->
+          <rect
+            x="120"
+            y="100"
+            width="60"
+            height="42"
+            rx="8"
+            fill="url(#paint0)"
+          />
+          <rect x="142" y="138" width="16" height="4" rx="2" fill="#0d2b3e" />
+          <!-- Body -->
+          <ellipse cx="150" cy="186" rx="24" ry="28" fill="#2377bb" />
+          <!-- Head -->
+          <ellipse cx="170" cy="95" rx="17" ry="16" fill="url(#avatarSkin)" />
+          <ellipse
+            cx="170"
+            cy="95"
+            rx="17"
+            ry="16"
+            fill="#b1c8e0"
+            fill-opacity="0.085"
+          />
+          <!-- Arms -->
+          <path
+            id="anim-arm1"
+            d="M165 120 Q162 146 139 150"
+            stroke="#9dc0e2"
+            stroke-width="7"
+            stroke-linecap="round"
+            fill="none"
+          />
+          <path
+            id="anim-arm2"
+            d="M175 120 Q185 140 210 150"
+            stroke="#9dc0e2"
+            stroke-width="7"
+            stroke-linecap="round"
+            fill="none"
+          />
+          <!-- Hands on keyboard -->
+          <ellipse cx="136" cy="154" rx="6" ry="3" fill="#eef3fa" />
+          <ellipse cx="216" cy="154" rx="6" ry="3" fill="#eef3fa" />
+          <!-- Laptop -->
+          <rect x="120" y="162" width="60" height="16" rx="3" fill="#195783" />
+          <!-- Accent circuit lines (AI/tech) -->
+          <polyline
+            points="180,110 210,98 225,125 195,138"
+            stroke="#55e2ff"
+            stroke-width="2"
+            fill="none"
+            opacity="0.54"
+          >
+            <animate
+              attributeName="stroke-dasharray"
+              values="0,24;24,0;0,24"
+              dur="2.6s"
+              repeatCount="indefinite"
+            />
+          </polyline>
+          <polyline
+            points="120,120 80,95 60,140 120,155"
+            stroke="#76e6ee"
+            stroke-width="2"
+            fill="none"
+            opacity="0.4"
+          >
+            <animate
+              attributeName="stroke-dasharray"
+              values="0,28;28,0;0,28"
+              dur="3s"
+              repeatCount="indefinite"
+            />
+          </polyline>
+          <!-- Subtle background blur shapes -->
+          <ellipse
+            cx="100"
+            cy="50"
+            rx="32"
+            ry="18"
+            fill="#4ebfff99"
+            opacity="0.18"
+          />
+          <ellipse
+            cx="220"
+            cy="70"
+            rx="44"
+            ry="20"
+            fill="#e1f6ff"
+            opacity="0.09"
+          />
+        </svg>
+      </div>
+      <div class="hero-lights" aria-hidden="true"></div>
+    </section>
 
-     <!-- About Section -->
-        <section id="about" class="about-main about-glass fadein-section visible" tabindex="0" aria-label="About Me">
-            <div class="about-header">
-                <span class="about-icon" aria-hidden="true">👨‍💻</span>
-                <h2>About Me</h2>
-                <div class="about-underline"></div>
-            </div>
-            <div class="about-bio">
-                <p>I’m <span class="bio-strong">Jaydip Gohil</span>, a final-year <strong>B.Tech Computer Science (AI)</strong> student at ITM SLS Baroda University, India, with a CGPA of 9.13 (7th semester, 8th ongoing). My fascination with technology began in my school days at Jawahar Navodaya Vidyalaya, Bharuch (79%, 2021), where I developed a strong foundation in science and problem-solving.<br><br>
-                Today, I specialize in <span class="ml-highlight">AI</span>, <span class="ml-highlight">machine learning</span>, and <span class="ml-highlight">computer vision</span>, driven by a passion to create impactful solutions. As a Python Developer Intern at <strong>Lycka Infolab Pvt. Ltd.</strong> and <strong>IOM Site</strong>, I work on automation, real-time image processing, and AI-driven applications.<br><br>
-                My projects—like the YouTube Comments Sentiment Analysis Tool and AI-Powered Image Stitching System—showcase my ability to apply theoretical knowledge to practical challenges. I actively participate in hackathons, contribute to open source on GitHub, and pursue certifications to stay ahead in tech. My goal: become a leading AI/ML engineer, developing innovative solutions for industries like healthcare, finance, and automation.<br><br>
-                Beyond coding, I enjoy collaborating with peers and exploring the latest tech trends to fuel my growth.
-                </p>
-                <div class="about-career-goals">
-                    <span class="goals-emoji" aria-hidden="true">🚀</span>
-                    <span><strong>Career Goals:</strong> Aspire to lead advancements in AI and machine learning, creating scalable solutions for real-world challenges in automation, healthcare, and beyond.</span>
-                </div>
-            </div>
-            <div class="about-divider" aria-hidden="true"></div>
-            <div class="about-education">
-                <h3><span class="edu-icon" aria-hidden="true">🎓</span> Education</h3>
-                <ul>
-                    <li><strong>ITM SLS Baroda University:</strong> B.Tech Computer Science (AI), 08/2021–04/2025, CGPA 9.13</li>
-                    <li><strong>Jawahar Navodaya Vidyalaya, Bharuch:</strong> Class XII (PCM), 01/2020–05/2021, 79%</li>
-                </ul>
-            </div>
-            <a href="#" class="btn cta-glow about-resume" download="JaydipGohil-Resume.pdf" role="button" tabindex="0" aria-label="Download My Resume">⬇️ Download My Resume</a>
-        </section>
+    <!-- About Section -->
+    <section
+      id="about"
+      class="about-main about-glass fadein-section visible"
+      tabindex="0"
+      aria-label="About Me"
+    >
+      <div class="about-header">
+        <span class="about-icon" aria-hidden="true">👨‍💻</span>
+        <h2>About Me</h2>
+        <div class="about-underline"></div>
+      </div>
+      <div class="about-bio">
+        <p>
+          I’m <span class="bio-strong">Jaydip Gohil</span>, a final-year
+          <strong>B.Tech Computer Science (AI)</strong> student at ITM SLS
+          Baroda University, India, with a CGPA of 9.13 (7th semester, 8th
+          ongoing). My fascination with technology began in my school days at
+          Jawahar Navodaya Vidyalaya, Bharuch (79%, 2021), where I developed a
+          strong foundation in science and problem-solving.<br /><br />
+          Today, I specialize in <span class="ml-highlight">AI</span>,
+          <span class="ml-highlight">machine learning</span>, and
+          <span class="ml-highlight">computer vision</span>, driven by a passion
+          to create impactful solutions. As a Python Developer Intern at
+          <strong>Lycka Infolab Pvt. Ltd.</strong> and
+          <strong>IOM Site</strong>, I work on automation, real-time image
+          processing, and AI-driven applications.<br /><br />
+          My projects—like the YouTube Comments Sentiment Analysis Tool and
+          AI-Powered Image Stitching System—showcase my ability to apply
+          theoretical knowledge to practical challenges. I actively participate
+          in hackathons, contribute to open source on GitHub, and pursue
+          certifications to stay ahead in tech. My goal: become a leading AI/ML
+          engineer, developing innovative solutions for industries like
+          healthcare, finance, and automation.<br /><br />
+          Beyond coding, I enjoy collaborating with peers and exploring the
+          latest tech trends to fuel my growth.
+        </p>
+        <div class="about-career-goals">
+          <span class="goals-emoji" aria-hidden="true">🚀</span>
+          <span
+            ><strong>Career Goals:</strong> Aspire to lead advancements in AI
+            and machine learning, creating scalable solutions for real-world
+            challenges in automation, healthcare, and beyond.</span
+          >
+        </div>
+      </div>
+      <div class="about-divider" aria-hidden="true"></div>
+      <div class="about-education">
+        <h3><span class="edu-icon" aria-hidden="true">🎓</span> Education</h3>
+        <ul>
+          <li>
+            <strong>ITM SLS Baroda University:</strong> B.Tech Computer Science
+            (AI), 08/2021–04/2025, CGPA 9.13
+          </li>
+          <li>
+            <strong>Jawahar Navodaya Vidyalaya, Bharuch:</strong> Class XII
+            (PCM), 01/2020–05/2021, 79%
+          </li>
+        </ul>
+      </div>
+      <a
+        href="#"
+        class="btn cta-glow about-resume"
+        download="JaydipGohil-Resume.pdf"
+        role="button"
+        tabindex="0"
+        aria-label="Download My Resume"
+        >⬇️ Download My Resume</a
+      >
+    </section>
 
     <!-- Skills Section -->
-    <section id="skills">
-      <h2>Skills & Expertise</h2>
-  
-      <div class="skills-category">
-        <h3>Programming Languages</h3>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <img src="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png" alt="Python Logo" class="skill-logo">
-                <div class="skill-info">
-                    <span class="skill-name">Python</span>
-                    <div class="skill-level">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                    </div>
-                </div>
+    <!-- Skills Section -->
+    <section
+      id="skills"
+      class="skills-section fadein-section visible"
+      tabindex="0"
+      aria-label="Skills and Expertise"
+    >
+      <div class="skills-header">
+        <span class="skills-icon" aria-hidden="true">💡</span>
+        <h2>Skills &amp; Expertise</h2>
+        <div class="skills-underline"></div>
+      </div>
+
+      <div class="skills-categories">
+        <div class="skills-category">
+          <h3><span class="category-icon">💻</span> Programming Languages</h3>
+          <div class="skills-grid">
+            <div
+              class="skill-card adv"
+              tabindex="0"
+              aria-label="Python, advanced skill level, five stars"
+            >
+              <span class="skill-logo" aria-hidden="true">🐍</span>
+              <span class="skill-name">Python</span>
+              <span class="skill-level" title="Advanced">⭐⭐⭐⭐⭐</span>
             </div>
-            <div class="skill-card">
-                <img src="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/java/java.png" alt="Java Logo" class="skill-logo">
-                <div class="skill-info">
-                    <span class="skill-name">Java</span>
-                    <div class="skill-level">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star">☆</span>
-                        <span class="star">☆</span>
-                    </div>
-                </div>
+            <div
+              class="skill-card inter"
+              tabindex="0"
+              aria-label="Java, intermediate skill level, four stars"
+            >
+              <span class="skill-logo" aria-hidden="true">☕</span>
+              <span class="skill-name">Java</span>
+              <span class="skill-level" title="Intermediate">⭐⭐⭐⭐</span>
             </div>
-            <div class="skill-card">
-                <img src="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/c/c.png" alt="C Logo" class="skill-logo">
-                <div class="skill-info">
-                    <span class="skill-name">C</span>
-                    <div class="skill-level">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star">☆</span>
-                        <span class="star">☆</span>
-                    </div>
-                </div>
+            <div
+              class="skill-card inter"
+              tabindex="0"
+              aria-label="C, intermediate skill level, four stars"
+            >
+              <span class="skill-logo" aria-hidden="true">💾</span>
+              <span class="skill-name">C</span>
+              <span class="skill-level" title="Intermediate">⭐⭐⭐⭐</span>
             </div>
+          </div>
         </div>
-    </div>
-  
-      <div class="skills-category">
-          <h3>Machine Learning & AI</h3>
+
+        <div class="skills-category">
+          <h3>
+            <span class="category-icon">🤖</span> Machine Learning &amp; AI
+          </h3>
           <div class="skills-grid">
-              <div class="skill-card">Scikit-learn (Advanced)</div>
-              <div class="skill-card">TensorFlow (Intermediate)</div>
-              <div class="skill-card">Deep Learning (Intermediate)</div>
-              <div class="skill-card">NLP (Intermediate)</div>
-              <div class="skill-card">OpenCV (Advanced)</div>
+            <div
+              class="skill-card adv"
+              tabindex="0"
+              aria-label="Scikit-learn, advanced skill level, five stars"
+            >
+              <span class="skill-logo" aria-hidden="true"
+                ><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikit-learn/scikit-learn-original.svg"
+                  alt="Scikit-learn"
+              /></span>
+              <span class="skill-name">Scikit-learn</span>
+              <span class="skill-level" title="Advanced">⭐⭐⭐⭐⭐</span>
+            </div>
+            <div
+              class="skill-card inter"
+              tabindex="0"
+              aria-label="TensorFlow, intermediate skill level, four stars"
+            >
+              <span class="skill-logo" aria-hidden="true"
+                ><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+                  alt="TensorFlow"
+              /></span>
+              <span class="skill-name">TensorFlow</span>
+              <span class="skill-level" title="Intermediate">⭐⭐⭐⭐</span>
+            </div>
+            <div
+              class="skill-card inter"
+              tabindex="0"
+              aria-label="Deep Learning, intermediate skill level, four stars"
+            >
+              <span class="skill-logo" aria-hidden="true">🧠</span>
+              <span class="skill-name">Deep Learning</span>
+              <span class="skill-level" title="Intermediate">⭐⭐⭐⭐</span>
+            </div>
+            <div
+              class="skill-card inter"
+              tabindex="0"
+              aria-label="NLP, intermediate skill level, four stars"
+            >
+              <span class="skill-logo" aria-hidden="true">🗣️</span>
+              <span class="skill-name">NLP</span>
+              <span class="skill-level" title="Intermediate">⭐⭐⭐⭐</span>
+            </div>
+            <div
+              class="skill-card adv"
+              tabindex="0"
+              aria-label="OpenCV, advanced skill level, five stars"
+            >
+              <span class="skill-logo" aria-hidden="true"
+                ><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg"
+                  alt="OpenCV"
+              /></span>
+              <span class="skill-name">OpenCV</span>
+              <span class="skill-level" title="Advanced">⭐⭐⭐⭐⭐</span>
+            </div>
           </div>
-      </div>
-  
-      <div class="skills-category">
-          <h3>Web Development</h3>
+        </div>
+
+        <div class="skills-category">
+          <h3><span class="category-icon">🌐</span> Web Development</h3>
           <div class="skills-grid">
-              <div class="skill-card">Flask (Intermediate)</div>
-              <div class="skill-card">FastAPI (Intermediate)</div>
-              <div class="skill-card">HTML (Intermediate)</div>
-              <div class="skill-card">CSS (Intermediate)</div>
-              <div class="skill-card">JavaScript (Intermediate)</div>
-              <div class="skill-card">SQL (Intermediate)</div>
+            <div
+              class="skill-card inter"
+              tabindex="0"
+              aria-label="Flask, intermediate skill level, four stars"
+            >
+              <span class="skill-logo" aria-hidden="true">🌶️</span>
+              <span class="skill-name">Flask</span>
+              <span class="skill-level" title="Intermediate">⭐⭐⭐⭐</span>
+            </div>
+            <div
+              class="skill-card inter"
+              tabindex="0"
+              aria-label="FastAPI, intermediate skill level, four stars"
+            >
+              <span class="skill-logo" aria-hidden="true">⚡</span>
+              <span class="skill-name">FastAPI</span>
+              <span class="skill-level" title="Intermediate">⭐⭐⭐⭐</span>
+            </div>
+            <div
+              class="skill-card inter"
+              tabindex="0"
+              aria-label="HTML, intermediate skill level, four stars"
+            >
+              <span class="skill-logo" aria-hidden="true"
+                ><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                  alt="HTML5"
+              /></span>
+              <span class="skill-name">HTML</span>
+              <span class="skill-level" title="Intermediate">⭐⭐⭐⭐</span>
+            </div>
+            <div
+              class="skill-card inter"
+              tabindex="0"
+              aria-label="CSS, intermediate skill level, four stars"
+            >
+              <span class="skill-logo" aria-hidden="true"
+                ><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                  alt="CSS3"
+              /></span>
+              <span class="skill-name">CSS</span>
+              <span class="skill-level" title="Intermediate">⭐⭐⭐⭐</span>
+            </div>
+            <div
+              class="skill-card inter"
+              tabindex="0"
+              aria-label="JavaScript, intermediate skill level, four stars"
+            >
+              <span class="skill-logo" aria-hidden="true"
+                ><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                  alt="JavaScript"
+              /></span>
+              <span class="skill-name">JavaScript</span>
+              <span class="skill-level" title="Intermediate">⭐⭐⭐⭐</span>
+            </div>
+            <div
+              class="skill-card inter"
+              tabindex="0"
+              aria-label="SQL, intermediate skill level, four stars"
+            >
+              <span class="skill-logo" aria-hidden="true"
+                ><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                  alt="SQL"
+              /></span>
+              <span class="skill-name">SQL</span>
+              <span class="skill-level" title="Intermediate">⭐⭐⭐⭐</span>
+            </div>
           </div>
-      </div>
-  
-      <div class="skills-category">
-          <h3>Soft Skills</h3>
+        </div>
+
+        <div class="skills-category">
+          <h3><span class="category-icon">🧩</span> Soft Skills</h3>
           <div class="skills-grid">
-              <div class="skill-card">Problem-Solving</div>
-              <div class="skill-card">Team Collaboration</div>
-              <div class="skill-card">Adaptability</div>
-              <div class="skill-card">Time Management</div>
+            <div
+              class="skill-card basic"
+              tabindex="0"
+              aria-label="Problem-Solving"
+            >
+              <span class="skill-logo" aria-hidden="true">💡</span>
+              <span class="skill-name">Problem-Solving</span>
+            </div>
+            <div
+              class="skill-card basic"
+              tabindex="0"
+              aria-label="Team Collaboration"
+            >
+              <span class="skill-logo" aria-hidden="true">🤝</span>
+              <span class="skill-name">Team Collaboration</span>
+            </div>
+            <div
+              class="skill-card basic"
+              tabindex="0"
+              aria-label="Adaptability"
+            >
+              <span class="skill-logo" aria-hidden="true">🔄</span>
+              <span class="skill-name">Adaptability</span>
+            </div>
+            <div
+              class="skill-card basic"
+              tabindex="0"
+              aria-label="Time Management"
+            >
+              <span class="skill-logo" aria-hidden="true">⏰</span>
+              <span class="skill-name">Time Management</span>
+            </div>
           </div>
+        </div>
       </div>
-  
-  </section> 
+    </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <!-- Projects Section -->
+    <section
+      id="projects"
+      class="projects-section fadein-section visible"
+      tabindex="0"
+      aria-label="My Projects"
+    >
+      <div class="projects-header">
+        <span class="projects-icon" aria-hidden="true"
+          ><img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+            alt="Projects Icon"
+            style="
+              height: 2.1rem;
+              width: 2.1rem;
+              filter: drop-shadow(0 0 6px #3b82f6);
+              vertical-align: middle;
+            "
+        /></span>
         <h2>My Projects</h2>
-        <div class="projects-container">
-            <div class="project-card">
-                <h3>YouTube Comments Sentiment Analysis Tool</h3>
-                <p>Developed a Python-based tool to analyze and visualize sentiments in YouTube video comments, enabling content creators to understand audience feedback.</p>
-                <p><strong>Technologies:</strong> Python, YouTube Data API, TextBlob, Matplotlib, WordCloud, FPDF</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>Loan Eligibility Prediction System</h3>
-                <p>Built a machine learning model to predict loan eligibility, streamlining financial decision-making processes.</p>
-                <p><strong>Techn “‘ologies:</strong> Python, Pandas, NumPy, Scikit-learn, Seaborn</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>Real-time Object Detection & Measurement</h3>
-                <p>Created a computer vision system for detecting and measuring small-scale objects in real-time, with applications in industrial automation.</p>
-                <p><strong>Technologies:</strong> Python, OpenCV</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>AI-Powered Image Stitching System</h3>
-                <p>Built a real-time image stitching pipeline to combine multiple camera inputs into a seamless linear output, useful for panoramic imaging.</p>
-                <p><strong>Technologies:</strong> Python, OpenCV</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
+        <div class="projects-underline"></div>
+      </div>
+      <div class="projects-container">
+        <div class="project-card">
+          <div class="project-img">
+            <img
+              src="https://placehold.co/480x200/2563eb/eee?text=Project+Image"
+              alt="YouTube Comments Sentiment Analysis screenshot"
+            />
+          </div>
+          <div class="project-top">
+            <span class="project-badge">AI/ML</span>
+          </div>
+          <h3>YouTube Comments Sentiment Analysis Tool</h3>
+          <p>
+            Developed a Python-based tool to analyze and visualize sentiments in
+            YouTube video comments, enabling content creators to understand
+            audience feedback.
+          </p>
+          <p>
+            <strong>Technologies:</strong> Python, YouTube Data API, TextBlob,
+            Matplotlib, WordCloud, FPDF
+          </p>
+          <a href="#" class="btn cta-glow">View Project</a>
         </div>
+        <div class="project-card">
+          <div class="project-img">
+            <img
+              src="https://placehold.co/480x200/2563eb/eee?text=Project+Image"
+              alt="Loan Eligibility Prediction screenshot"
+            />
+          </div>
+          <div class="project-top">
+            <span class="project-badge">AI/ML</span>
+          </div>
+          <h3>Loan Eligibility Prediction System</h3>
+          <p>
+            Built a machine learning model to predict loan eligibility,
+            streamlining financial decision-making processes.
+          </p>
+          <p>
+            <strong>Technologies:</strong> Python, Pandas, NumPy, Scikit-learn,
+            Seaborn
+          </p>
+          <a href="#" class="btn cta-glow">View Project</a>
+        </div>
+        <div class="project-card">
+          <div class="project-img">
+            <img
+              src="https://placehold.co/480x200/2563eb/eee?text=Project+Image"
+              alt="Object Detection screenshot"
+            />
+          </div>
+          <div class="project-top">
+            <span class="project-badge">CV</span>
+          </div>
+          <h3>Real-time Object Detection & Measurement</h3>
+          <p>
+            Created a computer vision system for detecting and measuring
+            small-scale objects in real-time, with applications in industrial
+            automation.
+          </p>
+          <p><strong>Technologies:</strong> Python, OpenCV</p>
+          <a href="#" class="btn cta-glow">View Project</a>
+        </div>
+        <div class="project-card">
+          <div class="project-img">
+            <img
+              src="https://placehold.co/480x200/2563eb/eee?text=Project+Image"
+              alt="Image Stitching screenshot"
+            />
+          </div>
+          <div class="project-top">
+            <span class="project-badge">CV</span>
+          </div>
+          <h3>AI-Powered Image Stitching System</h3>
+          <p>
+            Built a real-time image stitching pipeline to combine multiple
+            camera inputs into a seamless linear output, useful for panoramic
+            imaging.
+          </p>
+          <p><strong>Technologies:</strong> Python, OpenCV</p>
+          <a href="#" class="btn cta-glow">View Project</a>
+        </div>
+      </div>
     </section>
 
     <!-- Experience Section -->
     <section id="experience">
-        <h2>Work Experience</h2>
-        <div class="experience-container">
-            <div class="experience-item">
-                <h3>Python Developer Intern | Lycka Infolab Pvt. Ltd.</h3>
-                <p><em>Dec 2024–Present</em></p>
-                <p>Developing Python-based automation and AI-driven applications for software solutions.</p>
-                <ul>
-                    <li>Built data processing pipelines for real-time applications.</li>
-                    <li>Implemented backend development using Flask and FastAPI for API integration.</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>Python Developer Intern | IOM Site</h3>
-                <p><em>2024–Present</em></p>
-                <p>Focused on real-time image processing and computer vision solutions for industrial applications.</p>
-                <ul>
-                    <li>Developed Python scripts for industrial camera automation using the DVP library.</li>
-                    <li>Built algorithms for diamond facet analysis and height measurement.</li>
-                </ul>
-            </div>
+      <h2>Work Experience</h2>
+      <div class="experience-container">
+        <div class="experience-item">
+          <h3>Python Developer Intern | Lycka Infolab Pvt. Ltd.</h3>
+          <p><em>Dec 2024–Present</em></p>
+          <p>
+            Developing Python-based automation and AI-driven applications for
+            software solutions.
+          </p>
+          <ul>
+            <li>Built data processing pipelines for real-time applications.</li>
+            <li>
+              Implemented backend development using Flask and FastAPI for API
+              integration.
+            </li>
+          </ul>
         </div>
+        <div class="experience-item">
+          <h3>Python Developer Intern | IOM Site</h3>
+          <p><em>2024–Present</em></p>
+          <p>
+            Focused on real-time image processing and computer vision solutions
+            for industrial applications.
+          </p>
+          <ul>
+            <li>
+              Developed Python scripts for industrial camera automation using
+              the DVP library.
+            </li>
+            <li>
+              Built algorithms for diamond facet analysis and height
+              measurement.
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <!-- Certifications Section -->
     <section id="certifications">
-        <h2>Certifications</h2>
-        <ul>
-            <li>Java + DSA (Apna College, Oct 2023)</li>
-            <li>Web Animation (Developer Student Club, Jun 2023)</li>
-            <li>Emerging Technologies in AI & ML (Edunet, Aug 2024)</li>
-        </ul>
+      <h2>Certifications</h2>
+      <ul>
+        <li>Java + DSA (Apna College, Oct 2023)</li>
+        <li>Web Animation (Developer Student Club, Jun 2023)</li>
+        <li>Emerging Technologies in AI & ML (Edunet, Aug 2024)</li>
+      </ul>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
-        <h2>Get in Touch</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <p><strong>Email:</strong> jaydeepgohil1171@gmail.com</p>
-                <p><strong>Phone:</strong> (+91) 9313774498</p>
-                <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/jaydip-gohil-743481361">linkedin.com/in/jaydip-gohil</a></p>
-                <p><strong>GitHub:</strong> <a href="#">[GitHub Profile]</a></p>
-            </div>
-            <form id="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
+      <h2>Get in Touch</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <p><strong>Email:</strong> jaydeepgohil1171@gmail.com</p>
+          <p><strong>Phone:</strong> (+91) 9313774498</p>
+          <p>
+            <strong>LinkedIn:</strong>
+            <a href="https://linkedin.com/in/jaydip-gohil-743481361"
+              >linkedin.com/in/jaydip-gohil</a
+            >
+          </p>
+          <p><strong>GitHub:</strong> <a href="#">[GitHub Profile]</a></p>
         </div>
+        <form id="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
     </section>
 
     <!-- Blog Section -->
     <section id="blog">
-        <h2>Blog</h2>
-        <div class="blog-container">
-            <div class="blog-post">
-                <h3>Building a Sentiment Analysis Tool with Python and YouTube Data API</h3>
-                <p>A guide to creating the YouTube Comments Sentiment Analysis Tool, covering challenges, technologies, and lessons learned.</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-            <div class="blog-post">
-                <h3>Getting Started with OpenCV for Real-time Object Detection</h3>
-                <p>A tutorial on using OpenCV for object detection and measurement, based on project experience.</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
+      <h2>Blog</h2>
+      <div class="blog-container">
+        <div class="blog-post">
+          <h3>
+            Building a Sentiment Analysis Tool with Python and YouTube Data API
+          </h3>
+          <p>
+            A guide to creating the YouTube Comments Sentiment Analysis Tool,
+            covering challenges, technologies, and lessons learned.
+          </p>
+          <a href="#" class="btn">Read More</a>
         </div>
+        <div class="blog-post">
+          <h3>Getting Started with OpenCV for Real-time Object Detection</h3>
+          <p>
+            A tutorial on using OpenCV for object detection and measurement,
+            based on project experience.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 Jaydip Gohil</p>
-        <p>Building the Future with Code</p>
-        <div class="social-links">
-            <a href="https://linkedin.com/in/jaydip-gohil-743481361">LinkedIn</a>
-            <a href="#">GitHub</a>
-        </div>
+      <p>© 2025 Jaydip Gohil</p>
+      <p>Building the Future with Code</p>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/jaydip-gohil-743481361">LinkedIn</a>
+        <a href="#">GitHub</a>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
