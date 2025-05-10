@@ -617,13 +617,24 @@
       </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience">
-      <h2>Work Experience</h2>
+    <section
+      id="experience"
+      class="experience-main experience-glass fadein-section visible"
+      tabindex="0"
+      aria-label="Work Experience"
+    >
+      <div class="experience-header">
+        <span class="experience-icon" aria-hidden="true">💼</span>
+        <h2>Work Experience</h2>
+        <div class="experience-underline"></div>
+      </div>
       <div class="experience-container">
         <div class="experience-item">
-          <h3>Python Developer Intern | Lycka Infolab Pvt. Ltd.</h3>
-          <p><em>Dec 2024–Present</em></p>
+          <h3>
+            Python Developer Intern
+            <span class="exp-company">| Lycka Infolab Pvt. Ltd.</span>
+          </h3>
+          <p class="exp-duration"><em>Dec 2024–Present</em></p>
           <p>
             Developing Python-based automation and AI-driven applications for
             software solutions.
@@ -637,8 +648,10 @@
           </ul>
         </div>
         <div class="experience-item">
-          <h3>Python Developer Intern | IOM Site</h3>
-          <p><em>2024–Present</em></p>
+          <h3>
+            Python Developer Intern <span class="exp-company">| IOM Site</span>
+          </h3>
+          <p class="exp-duration"><em>2024–Present</em></p>
           <p>
             Focused on real-time image processing and computer vision solutions
             for industrial applications.
@@ -657,78 +670,125 @@
       </div>
     </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications">
-      <h2>Certifications</h2>
-      <ul>
-        <li>Java + DSA (Apna College, Oct 2023)</li>
-        <li>Web Animation (Developer Student Club, Jun 2023)</li>
-        <li>Emerging Technologies in AI & ML (Edunet, Aug 2024)</li>
-      </ul>
-    </section>
+    <section id="certifications" class="certifications-main certifications-glass fadein-section visible" tabindex="0" aria-label="Certifications">
+  <div class="certifications-header">
+    <span class="cert-icon" aria-hidden="true">🎓</span>
+    <h2>Certifications</h2>
+    <div class="cert-underline"></div>
+  </div>
+  <div class="cert-cards-container">
+    <div class="cert-card">
+      <div class="cert-card-title">Java + DSA</div>
+      <div class="cert-card-org">Apna College</div>
+      <div class="cert-card-date">Oct 2023</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-card-title">Web Animation</div>
+      <div class="cert-card-org">Developer Student Club</div>
+      <div class="cert-card-date">Jun 2023</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-card-title">Emerging Technologies in AI &amp; ML</div>
+      <div class="cert-card-org">Edunet</div>
+      <div class="cert-card-date">Aug 2024</div>
+    </div>
+  </div>
+</section>
 
     <!-- Contact Section -->
-    <section id="contact">
-      <h2>Get in Touch</h2>
+    <section
+      id="contact"
+      class="contact-main contact-glass fadein-section visible"
+      tabindex="0"
+      aria-label="Contact"
+    >
+      <div class="contact-header">
+        <span class="contact-icon" aria-hidden="true">📬</span>
+        <h2>Get in Touch</h2>
+        <div class="contact-underline"></div>
+      </div>
       <div class="contact-container">
         <div class="contact-info">
           <p><strong>Email:</strong> jaydeepgohil1171@gmail.com</p>
           <p><strong>Phone:</strong> (+91) 9313774498</p>
           <p>
             <strong>LinkedIn:</strong>
-            <a href="https://linkedin.com/in/jaydip-gohil-743481361"
+            <a
+              href="https://linkedin.com/in/jaydip-gohil-743481361"
+              target="_blank"
+              rel="noopener"
               >linkedin.com/in/jaydip-gohil</a
             >
           </p>
-          <p><strong>GitHub:</strong> <a href="#">[GitHub Profile]</a></p>
+          <p>
+            <strong>GitHub:</strong>
+            <a href="#" target="_blank" rel="noopener">[GitHub Profile]</a>
+          </p>
         </div>
-        <form id="contact-form">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
+        <form id="contact-form" autocomplete="off">
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            autocomplete="off"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            autocomplete="off"
+            required
+          />
           <textarea
             name="message"
             placeholder="Your Message"
+            rows="4"
             required
           ></textarea>
-          <button type="submit" class="btn">Send Message</button>
+          <button type="submit" class="btn cta-glow">Send Message</button>
         </form>
       </div>
     </section>
 
     <!-- Blog Section -->
-    <section id="blog">
-      <h2>Blog</h2>
-      <div class="blog-container">
-        <div class="blog-post">
-          <h3>
-            Building a Sentiment Analysis Tool with Python and YouTube Data API
-          </h3>
-          <p>
-            A guide to creating the YouTube Comments Sentiment Analysis Tool,
-            covering challenges, technologies, and lessons learned.
-          </p>
-          <a href="#" class="btn">Read More</a>
-        </div>
-        <div class="blog-post">
-          <h3>Getting Started with OpenCV for Real-time Object Detection</h3>
-          <p>
-            A tutorial on using OpenCV for object detection and measurement,
-            based on project experience.
-          </p>
-          <a href="#" class="btn">Read More</a>
-        </div>
-      </div>
-    </section>
+<section id="blog" class="blog-main blog-glass fadein-section visible" tabindex="0" aria-label="Blog">
+  <div class="blog-header">
+    <span class="blog-icon" aria-hidden="true">📝</span>
+    <h2>Blog</h2>
+    <div class="blog-underline"></div>
+  </div>
+  <div class="blog-container">
+    <div class="blog-post">
+      <h3>
+        Building a Sentiment Analysis Tool with Python and YouTube Data API
+      </h3>
+      <p>
+        A guide to creating the YouTube Comments Sentiment Analysis Tool,
+        covering challenges, technologies, and lessons learned.
+      </p>
+      <a href="#" class="btn cta-outline">Read More</a>
+    </div>
+    <div class="blog-post">
+      <h3>Getting Started with OpenCV for Real-time Object Detection</h3>
+      <p>
+        A tutorial on using OpenCV for object detection and measurement,
+        based on project experience.
+      </p>
+      <a href="#" class="btn cta-outline">Read More</a>
+    </div>
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-      <p>© 2025 Jaydip Gohil</p>
-      <p>Building the Future with Code</p>
-      <div class="social-links">
-        <a href="https://linkedin.com/in/jaydip-gohil-743481361">LinkedIn</a>
-        <a href="#">GitHub</a>
-      </div>
-    </footer>
+<!-- Footer -->
+<footer class="footer-main">
+  <p>© 2025 Jaydip Gohil</p>
+  <p>Building the Future with Code</p>
+  <div class="social-links">
+    <a href="https://linkedin.com/in/jaydip-gohil-743481361" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="#" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</footer>
 
     <script src="script.js"></script>
   </body>
