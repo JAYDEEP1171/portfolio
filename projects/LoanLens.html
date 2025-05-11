@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoanLens - Loan Eligibility Predictor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #1a3c34, #4ade80);
+        }
+        .section-bg {
+            background: linear-gradient(135deg, #2a2a2a, #1a3c34);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 255, 128, 0.2);
+        }
+        .btn-hover:hover {
+            background: linear-gradient(135deg, #22c55e, #15803d);
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+    <header class="hero-bg text-white py-16 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">LoanLens</h1>
+        <p class="text-lg md:text-xl max-w-2xl mx-auto opacity-90">
+            Predict loan eligibility with a machine learning-powered web app designed for financial insights.
+        </p>
+    </header>
+
+    <section class="section-bg py-12 px-4 md:px-8">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-semibold text-center mb-8 text-green-300">Project Overview</h2>
+            <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                LoanLens is a Flask-based web application that uses a logistic regression model to predict loan eligibility. It supports both individual and batch predictions with detailed performance metrics.
+            </p>
+            <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                <strong>Technologies:</strong> Python, Flask, Scikit-learn, Pandas, NumPy, Tailwind CSS, Render.
+            </p>
+            <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                <strong>Repository:</strong> <a href="https://github.com/JAYDEEP1171/LoanLens" class="text-green-400 underline">GitHub</a> | <strong>Live App:</strong> <a href="https://loanlens.onrender.com" class="text-green-400 underline">Render</a>
+            </p>
+        </div>
+    </section>
+
+    <section class="py-12 px-4 md:px-8">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-semibold text-center mb-8 text-green-300">Key Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6 bg-gray-800 rounded-lg shadow-lg card-hover transition">
+                    <h3 class="text-xl font-bold mb-4 text-green-400">Batch Prediction</h3>
+                    <p class="text-gray-400">Upload a CSV file to predict loan eligibility for multiple applicants.</p>
+                </div>
+                <div class="text-center p-6 bg-gray-800 rounded-lg shadow-lg card-hover transition">
+                    <h3 class="text-xl font-bold mb-4 text-green-400">Single Form Input</h3>
+                    <p class="text-gray-400">Enter individual applicant data to get a real-time loan prediction.</p>
+                </div>
+                <div class="text-center p-6 bg-gray-800 rounded-lg shadow-lg card-hover transition">
+                    <h3 class="text-xl font-bold mb-4 text-green-400">Performance Metrics</h3>
+                    <p class="text-gray-400">Displays accuracy, precision, recall, and F1-score for transparency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-bg py-12 px-4 md:px-8">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-semibold text-center mb-8 text-green-300">Challenges & Solutions</h2>
+            <ul class="list-disc pl-6 text-gray-300 space-y-3">
+                <li><strong>Dataset Handling:</strong> Loan-train.csv was included in the repo as it fit GitHub's size limit.</li>
+                <li><strong>Consistent Encoding:</strong> LabelEncoders were stored to ensure test data matches training format.</li>
+                <li><strong>Startup Delays:</strong> Identified as a Render free-tier limitation, noted for future upgrades.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="py-12 px-4 md:px-8">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-semibold text-center mb-8 text-green-300">Future Enhancements</h2>
+            <ul class="list-disc pl-6 text-gray-300 space-y-3">
+                <li>Implement Random Forest or XGBoost for better accuracy.</li>
+                <li>Enable download of prediction results as CSV.</li>
+                <li>Add login/authentication for secure access.</li>
+                <li>Visualize feature importance with charts.</li>
+                <li>Pre-train and load models with joblib to reduce startup time.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-300 py-8 text-center">
+        <p class="text-lg">Developed with ❤️ by Jaydeep Gohil | B.Tech CSE (AI)</p>
+        <p class="mt-2">© 2025 LoanLens. All rights reserved.</p>
+    </footer>
+</body>
+</html>

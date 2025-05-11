@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouSentiment - YouTube Comment Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a; /* Dark background for contrast */
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #1a3c34, #4ade80); /* Green to dark green-black gradient */
+        }
+        .section-bg {
+            background: linear-gradient(135deg, #2a2a2a, #1a3c34); /* Subtle dark to green gradient */
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 255, 128, 0.2);
+        }
+        .btn-hover:hover {
+            background: linear-gradient(135deg, #22c55e, #15803d);
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+    <!-- Header -->
+    <header class="hero-bg text-white py-16 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">YouSentiment</h1>
+        <p class="text-lg md:text-xl max-w-2xl mx-auto opacity-90">
+            Dive into YouTube comments with AI-powered sentiment analysis and vibrant visualizations.
+        </p>
+    </header>
+
+    <!-- Project Overview -->
+    <section class="section-bg py-12 px-4 md:px-8">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-semibold text-center mb-8 text-green-300">About the Project</h2>
+            <p class="text-lg text-gray-300 leading-relaxed mb-6 max-w-3xl mx-auto">
+                YouSentiment is a Flask-powered web app that analyzes YouTube video comments to reveal audience emotions. Using the YouTube Data API, TextBlob for sentiment analysis, and tools like WordCloud and Matplotlib, it delivers stunning pie charts and word clouds to visualize positive, negative, and neutral sentiments.
+            </p>
+            <div class="text-center">
+                <a href="#" class="inline-block bg-green-500 text-white py-3 px-6 rounded-lg font-medium transition btn-hover">
+                    Explore Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-12 px-4 md:px-8">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-semibold text-center mb-8 text-green-300">Key Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6 bg-gray-800 rounded-lg shadow-lg card-hover transition">
+                    <h3 class="text-xl font-bold mb-4 text-green-400">Sentiment Analysis</h3>
+                    <p class="text-gray-400">
+                        Classifies comments as Positive, Negative, or Neutral using TextBlob’s advanced polarity scoring.
+                    </p>
+                </div>
+                <div class="text-center p-6 bg-gray-800 rounded-lg shadow-lg card-hover transition">
+                    <h3 class="text-xl font-bold mb-4 text-green-400">Visual Insights</h3>
+                    <p class="text-gray-400">
+                        Showcases sentiment distribution with dynamic pie charts and word clouds for key insights.
+                    </p>
+                </div>
+                <div class="text-center p-6 bg-gray-800 rounded-lg shadow-lg card-hover transition">
+                    <h3 class="text-xl font-bold mb-4 text-green-400">Video Metadata</h3>
+                    <p class="text-gray-400">
+                        Displays video title and thumbnail, pulled seamlessly from the YouTube API.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visualizations Showcase -->
+    <section class="section-bg py-12 px-4 md:px-8">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-semibold text-center mb-8 text-green-300">Sample Visualizations</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <!-- Placeholder Image 1: Pie Chart -->
+                <div class="bg-gray-800 p-4 rounded-lg shadow-lg card-hover transition">
+                    <img src="assets/YouSentiment1.png" alt="Sentiment Pie Chart" class="w-full h-64 object-cover rounded-md mb-4">
+                    <p class="text-center text-gray-400">Sentiment Distribution Pie Chart (Replace with your pie chart)</p>
+                </div>
+                <!-- Placeholder Image 2: Word Cloud -->
+                <div class="bg-gray-800 p-4 rounded-lg shadow-lg card-hover transition">
+                    <img src="https://images.unsplash.com/photo-1516321310764-8d9c1f3e9317?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Word Cloud" class="w-full h-64 object-cover rounded-md mb-4">
+                    <p class="text-center text-gray-400">Positive Comments Word Cloud (Replace with your word cloud)</p>
+                </div>
+            </div>
+            <!-- Placeholder Video -->
+            <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+                <video controls class="w-full h-64 rounded-md mb-4">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="text-center text-gray-400">Demo Video of YouSentiment (Replace with your project video)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8 text-center">
+        <p class="text-lg">Crafted with 🌟 using Flask, YouTube API, and Tailwind CSS</p>
+        <p class="mt-2">© 2025 YouSentiment. All rights reserved.</p>
+    </footer>
+</body>
+</html>
