@@ -160,3 +160,57 @@ document.getElementById('loanlens-popup').addEventListener('click', function (e)
     hideLoanLensPopup();
   }
 });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const certCards = document.querySelectorAll('.cert-card');
+  const certPopup = document.getElementById('cert-popup');
+  const certImage = document.getElementById('cert-image');
+  const errorMessage = document.getElementById('error-message');
+  const closePopup = document.querySelector('.close-popup');
+
+  certCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const imageSrc = card.getAttribute('data-cert-image');
+      certImage.src = imageSrc;
+      certImage.style.display = 'none';
+      errorMessage.style.display = 'none';
+      certPopup.style.display = 'flex';
+
+      // Check if image loads successfully
+      certImage.onload = () => {
+        certImage.style.display = 'block';
+      };
+      certImage.onerror = () => {
+        errorMessage.style.display = 'block';
+        console.error(`Failed to load image: ${imageSrc}`);
+      };
+    });
+  });
+
+  closePopup.addEventListener('click', () => {
+    certPopup.style.display = 'none';
+    certImage.src = '';
+    certImage.style.display = 'none';
+    errorMessage.style.display = 'none';
+  });
+
+  certPopup.addEventListener('click', (e) => {
+    if (e.target === certPopup) {
+      certPopup.style.display = 'none';
+      certImage.src = '';
+      certImage.style.display = 'none';
+      errorMessage.style.display = 'none';
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && certPopup.style.display === 'flex') {
+      certPopup.style.display = 'none';
+      certImage.src = '';
+      certImage.style.display = 'none';
+      errorMessage.style.display = 'none';
+    }
+  });
+});

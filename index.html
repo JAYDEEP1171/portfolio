@@ -1034,36 +1034,41 @@
     </section>
 
     <section
-      id="certifications"
-      class="certifications-main certifications-glass fadein-section visible"
-      tabindex="0"
-      aria-label="Certifications"
-    >
-      <div class="certifications-header">
-        <span class="cert-icon" aria-hidden="true">🎓</span>
-        <h2>Certifications</h2>
-        <div class="cert-underline"></div>
-      </div>
-      <div class="cert-cards-container">
-        <div class="cert-card">
-          <div class="cert-card-title">Java + DSA</div>
-          <div class="cert-card-org">Apna College</div>
-          <div class="cert-card-date">Oct 2023</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-card-title">Web Animation</div>
-          <div class="cert-card-org">Developer Student Club</div>
-          <div class="cert-card-date">Jun 2023</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-card-title">
-            Emerging Technologies in AI &amp; ML
-          </div>
-          <div class="cert-card-org">Edunet</div>
-          <div class="cert-card-date">Aug 2024</div>
-        </div>
-      </div>
-    </section>
+  id="certifications"
+  class="certifications-main certifications-glass fadein-section visible"
+  tabindex="0"
+  aria-label="Certifications"
+>
+  <div class="certifications-header">
+    <span class="cert-icon" aria-hidden="true">🎓</span>
+    <h2>Certifications</h2>
+    <div class="cert-underline"></div>
+  </div>
+  <div class="cert-cards-container">
+    <div class="cert-card" data-cert-image="assets/alpha.jpg">
+      <div class="cert-card-title">Java + DSA</div>
+      <div class="cert-card-org">Apna College</div>
+      <div class="cert-card-date">Oct 2023</div>
+    </div>
+    <div class="cert-card" data-cert-image="assets/lycka.jpg">
+      <div class="cert-card-title">Web Animation</div>
+      <div class="cert-card-org">Developer Student Club</div>
+      <div class="cert-card-date">Jun 2023</div>
+    </div>
+    <div class="cert-card" data-cert-image="assets/sap.jpg">
+      <div class="cert-card-title">Emerging Technologies in AI & ML</div>
+      <div class="cert-card-org">Edunet</div>
+      <div class="cert-card-date">Aug 2024</div>
+    </div>
+  </div>
+  <div id="cert-popup" class="cert-popup" style="display: none;">
+    <div class="popup-content">
+      <span class="close-popup">×</span>
+      <img id="cert-image" src="" alt="Certificate" style="display: none;">
+      <div id="error-message" style="display: none; color: white; text-align: center;">Failed to load certificate image.</div>
+    </div>
+  </div>
+</section>
 
     <!-- Contact Section -->
     <section
