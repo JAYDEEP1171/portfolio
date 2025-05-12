@@ -1,68 +1,140 @@
-// Hamburger menu logic
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('open');
-        });
-        // Close mobile menu after clicking any link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('open');
-            });
-        });
-        // Sticky nav shadow effect
-        window.addEventListener('scroll', () => {
-            document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 8);
-        });
-        // Smooth scroll
-        document.querySelectorAll('.nav-links a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                if (this.hash) {
-                    e.preventDefault();
-                    const section = document.querySelector(this.hash);
-                    if(section) {
-                        window.scrollTo({
-                            top: section.offsetTop - 58,
-                            behavior: 'smooth'
-                        });
-                    }
-                }
-            });
-        });
-        // Highlight nav link on scroll
-        const sections = document.querySelectorAll('main section');
-        const navItems = document.querySelectorAll('.nav-links li');
-        function activateNavLink() {
-            let index = sections.length;
-            while(--index && window.scrollY + 100 < sections[index].offsetTop) {}
-            navItems.forEach(li => li.classList.remove('active'));
-            if(navItems[index]) navItems[index].classList.add('active');
-        }
-        window.addEventListener('scroll', activateNavLink);
-        activateNavLink();
+document.addEventListener("DOMContentLoaded", () => {
+  // Hamburger Menu Toggle
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
 
-        // On-scroll fade-in for about and skills sections
-        const aboutSection = document.querySelector('#about');
-        const skillsSection = document.querySelector('#skills');
-        function checkVisibility() {
-            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+    hamburger.textContent = navLinks.classList.contains("open") ? "✖" : "☰";
+  });
 
-            if(aboutSection) {
-                const rectAbout = aboutSection.getBoundingClientRect();
-                if(rectAbout.top <= windowHeight * 0.85) {
-                    aboutSection.classList.add('visible');
-                }
-            }
-            if(skillsSection) {
-                const rectSkills = skillsSection.getBoundingClientRect();
-                if(rectSkills.top <= windowHeight * 0.85) {
-                    skillsSection.classList.add('visible');
-                }
-            }
-            if(aboutSection.classList.contains('visible') && skillsSection.classList.contains('visible')) {
-                window.removeEventListener('scroll', checkVisibility);
-            }
-        }
-        window.addEventListener('scroll', checkVisibility);
-        // Initial check in case already visible
-        checkVisibility();
+  // Close mobile menu when a link is clicked
+  document.querySelectorAll(".nav-links a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      hamburger.textContent = "☰";
+    });
+  });
+
+  // Fade-in Sections on Scroll
+  const fadeInSections = document.querySelectorAll(".fadein-section");
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+  };
+
+  const sectionObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  fadeInSections.forEach((section) => {
+    sectionObserver.observe(section);
+  });
+
+  // Sticky Navbar Shadow
+  const nav = document.querySelector("nav");
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  };
+  window.addEventListener("scroll", handleScroll);
+
+  // Active Nav Link Highlighting
+  const sections = document.querySelectorAll("section[id]");
+  const navLinksItems = document.querySelectorAll(".nav-links a");
+
+  const updateActiveNavLink = () => {
+    let currentSection = "";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 100;
+      if (window.scrollY >= sectionTop) {
+        currentSection = section.getAttribute("id");
+      }
+    });
+
+    navLinksItems.forEach((link) => {
+      link.parentElement.classList.remove("active");
+      if (link.getAttribute("href").substring(1) === currentSection) {
+        link.parentElement.classList.add("active");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", updateActiveNavLink);
+
+  // Smooth Scroll for Anchor Links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
+
+  // Contact Form Submission
+  const contactForm = document.getElementById("contact-form");
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(contactForm);
+    const name = formData.get("name").trim();
+    const email = formData.get("email").trim();
+    const message = formData.get("message").trim();
+
+    // Basic client-side validation
+    if (!name || !email || !message) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    try {
+      // Simulated API call (replace with actual endpoint if available)
+      console.log("Form submitted:", { name, email, message });
+
+      // Placeholder for actual form submission
+      // const response = await fetch('YOUR_API_ENDPOINT', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ name, email, message })
+      // });
+
+      alert("Message sent successfully! I will get back to you soon.");
+      contactForm.reset();
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("There was an error sending your message. Please try again later.");
+    }
+  });
+});
+
+// Open popup: call openProjectPopup()
+function openProjectPopup() {
+  document.getElementById('project-popup').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+// Close by button or overlay click
+document.getElementById('popup-close-btn').onclick = closeProjectPopup;
+document.getElementById('project-popup').onclick = function(e) {
+  if (e.target === this) closeProjectPopup();
+};
+function closeProjectPopup() {
+  document.getElementById('project-popup').classList.remove('active');
+  document.body.style.overflow = '';
+}
