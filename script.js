@@ -138,3 +138,25 @@ function closeProjectPopup() {
   document.getElementById('project-popup').classList.remove('active');
   document.body.style.overflow = '';
 }
+
+// Show the LoanLens popup
+function showLoanLensPopup() {
+  document.getElementById('loanlens-popup').classList.add('active');
+  document.body.style.overflow = 'hidden'; // Prevent background scroll
+}
+
+// Hide the LoanLens popup
+function hideLoanLensPopup() {
+  document.getElementById('loanlens-popup').classList.remove('active');
+  document.body.style.overflow = ''; // Restore scroll
+}
+
+// Handle close button
+document.getElementById('loanlens-popup-close-btn').addEventListener('click', hideLoanLensPopup);
+
+// Optional: close when user clicks outside modal content
+document.getElementById('loanlens-popup').addEventListener('click', function (e) {
+  if (e.target === this) {
+    hideLoanLensPopup();
+  }
+});

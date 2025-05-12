@@ -688,94 +688,208 @@
             "
         /></span>
 
-        <!-- Project Popup Modal (hidden by default) -->
         <div class="project-popup-overlay" id="project-popup">
-          <div class="project-popup-content">
-            <button class="popup-close-btn" id="popup-close-btn" title="Close">
-              &times;
-            </button>
-            <header class="popup-hero-bg">
-              <h1 class="popup-title">YouSentiment</h1>
-              <p class="popup-desc">
-                Dive into YouTube comments with AI-powered sentiment analysis
-                and vibrant visualizations.
-              </p>
-            </header>
-            <section class="popup-section-bg">
-              <h2>About the Project</h2>
+  <div class="project-popup-content">
+    <!-- Close Button (floating) -->
+    <button class="popup-close-btn" id="popup-close-btn" title="Close">
+      &times;
+    </button>
+    <!-- HERO SECTION -->
+    <header class="popup-hero-bg" style="text-align:center; padding-bottom:2rem;">
+      <h1 class="popup-title">YouSentiment</h1>
+      <p class="popup-desc">
+        Dive into YouTube comments with AI-powered sentiment analysis<br>
+        and vibrant visualizations.
+      </p>
+      <a href="#" class="popup-explore-link" style="margin-top:1rem; display: inline-block;">Explore Now</a>
+    </header>
+    <!-- BODY WRAP -->
+    <div class="popup-body-grid" style="display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;">
+      <!-- Left Column: About + Features -->
+      <div class="popup-main-info" style="flex: 1 1 330px; min-width: 300px;">
+        <!-- ABOUT -->
+        <section class="popup-section-bg">
+          <h2>About the Project</h2>
+          <p>
+            YouSentiment is a Flask-powered web app that analyzes YouTube
+            video comments to reveal audience emotions. Using the YouTube
+            Data API, TextBlob for sentiment analysis, and tools like
+            WordCloud and Matplotlib, it delivers stunning pie charts and
+            word clouds to visualize positive, negative, and neutral
+            sentiments.
+          </p>
+        </section>
+        <!-- FEATURES GRID -->
+        <section style="margin-top:2rem;">
+          <h2>Key Features</h2>
+          <div class="popup-features" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div class="popup-feature-card">
+              <h3>Sentiment Analysis</h3>
               <p>
-                YouSentiment is a Flask-powered web app that analyzes YouTube
-                video comments to reveal audience emotions. Using the YouTube
-                Data API, TextBlob for sentiment analysis, and tools like
-                WordCloud and Matplotlib, it delivers stunning pie charts and
-                word clouds to visualize positive, negative, and neutral
-                sentiments.
+                Classifies comments as Positive, Negative, or Neutral using
+                TextBlob’s advanced polarity scoring.
               </p>
-              <div style="text-align: center">
-                <a href="#" class="popup-explore-link">Explore Now</a>
-              </div>
-            </section>
-            <section>
-              <h2>Key Features</h2>
-              <div class="popup-features">
-                <div class="popup-feature-card">
-                  <h3>Sentiment Analysis</h3>
-                  <p>
-                    Classifies comments as Positive, Negative, or Neutral using
-                    TextBlob’s advanced polarity scoring.
-                  </p>
-                </div>
-                <div class="popup-feature-card">
-                  <h3>Visual Insights</h3>
-                  <p>
-                    Showcases sentiment distribution with dynamic pie charts and
-                    word clouds for key insights.
-                  </p>
-                </div>
-                <div class="popup-feature-card">
-                  <h3>Video Metadata</h3>
-                  <p>
-                    Displays video title and thumbnail, pulled seamlessly from
-                    the YouTube API.
-                  </p>
-                </div>
-              </div>
-            </section>
-            <section class="popup-section-bg popup-showcase">
-              <h2>Sample Visualizations</h2>
-              <div class="popup-gallery">
-                <div>
-                  <img
-                    src="assets/YouSentiment1.png"
-                    alt="Sentiment Pie Chart"
-                  />
-                  <p>Sentiment Distribution Pie Chart</p>
-                </div>
-                <div>
-                  <img
-                    src="https://images.unsplash.com/photo-1516321310764-8d9c1f3e9317?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    alt="Word Cloud"
-                  />
-                  <p>Positive Comments Word Cloud</p>
-                </div>
-              </div>
-              <div class="popup-video">
-                <video controls>
-                  <source
-                    src="https://www.w3schools.com/html/mov_bbb.mp4"
-                    type="video/mp4"
-                  />
-                  Your browser does not support the video tag.
-                </video>
-                <p>Demo Video of YouSentiment</p>
-              </div>
-            </section>
-            <footer class="popup-footer">
-              <p>Crafted with 🌟 using Flask, YouTube API, and Tailwind CSS</p>
-              <p>© 2025 YouSentiment. All rights reserved.</p>
-            </footer>
+            </div>
+            <div class="popup-feature-card">
+              <h3>Visual Insights</h3>
+              <p>
+                Showcases sentiment distribution with dynamic pie charts and
+                word clouds for key insights.
+              </p>
+            </div>
+            <div class="popup-feature-card">
+              <h3>Video Metadata</h3>
+              <p>
+                Displays video title and thumbnail, pulled seamlessly from
+                the YouTube API.
+              </p>
+            </div>
+            <div class="popup-feature-card">
+              <h3>Easy Exploration</h3>
+              <p>
+                Instantly explore results and insights for any public YouTube video.
+              </p>
+            </div>
           </div>
-        </div>
+        </section>
+      </div>
+      <!-- Right Column: Visualizations -->
+      <div class="popup-visual-section" style="flex:1 1 330px;min-width:300px;">
+        <section class="popup-section-bg popup-showcase">
+          <h2>Sample Visualizations</h2>
+          <div class="popup-gallery" style="display:flex;gap:1rem;">
+            <div>
+              <img src="assets/YouSentiment1.png" alt="Sentiment Pie Chart" style="max-width: 120px; border-radius:8px;"/>
+              <p style="text-align:center;font-size:0.95em;">Sentiment Distribution Pie Chart</p>
+            </div>
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1516321310764-8d9c1f3e9317?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Word Cloud"
+                style="max-width: 120px; border-radius:8px;"
+              />
+              <p style="text-align:center;font-size:0.95em;">Positive Comments Word Cloud</p>
+            </div>
+          </div>
+          <div class="popup-video" style="margin-top:1.5rem;text-align:center;">
+            <video controls style="max-width:90%;">
+              <source
+                src="https://www.w3schools.com/html/mov_bbb.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+            <p style="text-align:center;font-size:0.95em;">Demo Video of YouSentiment</p>
+          </div>
+        </section>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+<div class="project-popup-overlay" id="loanlens-popup">
+  <div class="project-popup-content">
+    <!-- Close Button (floating) -->
+    <button class="popup-close-btn" id="loanlens-popup-close-btn" title="Close">
+      &times;
+    </button>
+    <!-- HERO SECTION -->
+    <header class="popup-hero-bg" style="text-align:center; padding-bottom:2rem;">
+      <h1 class="popup-title">LoanLens</h1>
+      <p class="popup-desc">
+        Predict loan eligibility instantly with machine learning.<br>
+        Upload data or try individual cases—smart, scalable, open source.
+      </p>
+      <a href="https://loanlens.onrender.com" class="popup-explore-link" target="_blank" style="margin-top:1rem; display: inline-block;">Try Live Demo</a>
+    </header>
+    <!-- BODY WRAP -->
+    <div class="popup-body-grid" style="display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;">
+      <!-- Left Column: About + Features -->
+      <div class="popup-main-info" style="flex: 1 1 330px; min-width: 300px;">
+        <!-- ABOUT -->
+        <section class="popup-section-bg">
+          <h2>About the Project</h2>
+          <p>
+            LoanLens is a web-based tool that predicts whether a loan applicant is eligible 
+            using a trained machine learning model.
+            Designed for individuals and institutions, it brings a robust, accurate, and 
+            intuitive workflow for rapid credit screening using real-world datasets.
+            <br>
+            <span style="color:#98ec8a;">Tech Stack:</span>
+            Flask, Python, Pandas, Scikit-learn, Tailwind CSS, GitHub, Render.
+          </p>
+        </section>
+        <!-- FEATURES GRID -->
+        <section style="margin-top:2rem;">
+          <h2>Key Features</h2>
+          <div class="popup-features" style="display: grid; grid-template-columns:1fr 1fr; gap:1rem;">
+            <div class="popup-feature-card">
+              <h3>Batch Prediction</h3>
+              <p>
+                Upload a CSV dataset (loan-test.csv) and get eligibility predictions for each applicant in seconds.
+              </p>
+            </div>
+            <div class="popup-feature-card">
+              <h3>Single Applicant Form</h3>
+              <p>
+                Enter an applicant's details and instantly receive a prediction—eligible or not eligible.
+              </p>
+            </div>
+            <div class="popup-feature-card">
+              <h3>Model Insights</h3>
+              <p>
+                See real-time model performance: accuracy, precision, recall, F1-score, and balanced reporting.
+              </p>
+            </div>
+            <div class="popup-feature-card">
+              <h3>Modern Web UI</h3>
+              <p>
+                Clean, card-based layout, responsive design, and color-coded results—accessible on all devices.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- Right Column: Visualizations / Sample UI Demo -->
+      <div class="popup-visual-section" style="flex:1 1 330px;min-width:300px;">
+        <section class="popup-section-bg popup-showcase">
+          <h2>Sample Screens & Visualizations</h2>
+          <div class="popup-gallery" style="display:flex;gap:1.2rem;">
+            <div>
+              <img src="https://raw.githubusercontent.com/JAYDEEP1171/LoanLens/main/screenshots/loans_form.png" alt="Single Applicant Prediction Form" style="max-width:140px; border-radius:8px;"/>
+              <p style="text-align:center;font-size:0.95em;">Single Applicant Form</p>
+            </div>
+            <div>
+              <img src="https://raw.githubusercontent.com/JAYDEEP1171/LoanLens/main/screenshots/batch_upload.png" alt="Batch Upload Table" style="max-width:140px; border-radius:8px;"/>
+              <p style="text-align:center;font-size:0.95em;">Batch Prediction Results</p>
+            </div>
+          </div>
+          <div class="popup-video" style="margin-top:1.5rem;text-align:center;">
+            <video controls style="max-width:90%;">
+              <source
+                src="https://www.w3schools.com/html/movie.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+            <p style="text-align:center;font-size:0.95em;">Demo Video: Predicting Loan Eligibility</p>
+          </div>
+          <div style="text-align:center; margin-top:1.2em;">
+            <a href="https://github.com/JAYDEEP1171/LoanLens" target="_blank" class="popup-explore-link">View on GitHub</a>
+          </div>
+        </section>
+      </div>
+    </div>
+    <footer class="popup-footer" style="margin-top:2rem;">
+      <p>
+        Crafted using Flask, Scikit-learn, Tailwind CSS, and Render.<br>
+        <span style="color:#83f497;">© 2025 LoanLens &nbsp;|&nbsp; Author: Jaydeep</span>
+      </p>
+    </footer>
+  </div>
+</div>
 
         <h2>My Projects</h2>
         <div class="projects-underline"></div>
@@ -822,7 +936,8 @@
             <strong>Technologies:</strong> Python, Pandas, NumPy, Scikit-learn,
             Seaborn
           </p>
-          <a href="projects/LoanLens.html" class="btn cta-glow">View Project</a>
+          <!-- <a href="projects/LoanLens.html" class="btn cta-glow">View Project</a> -->
+          <button onclick="showLoanLensPopup()" class="btn cta-glow">View LoanLens Project</button>
         </div>
         <div class="project-card">
           <div class="project-img">
