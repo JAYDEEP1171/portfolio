@@ -688,208 +688,485 @@
             "
         /></span>
 
-        <div class="project-popup-overlay" id="project-popup">
+
+<!-- pop up page for yousentiment -->
+
+        <div class="project-popup-overlay" id="yousentiment-popup">
   <div class="project-popup-content">
     <!-- Close Button (floating) -->
-    <button class="popup-close-btn" id="popup-close-btn" title="Close">
-      &times;
+    <button class="popup-close-btn" id="yousentiment-popup-close-btn" title="Close">
+      ×
     </button>
     <!-- HERO SECTION -->
-    <header class="popup-hero-bg" style="text-align:center; padding-bottom:2rem;">
+    <header
+      class="popup-hero-bg"
+      style="text-align: center; padding-bottom: 2rem"
+    >
       <h1 class="popup-title">YouSentiment</h1>
       <p class="popup-desc">
-        Dive into YouTube comments with AI-powered sentiment analysis<br>
+        Dive into YouTube comments with AI-powered sentiment analysis<br />
         and vibrant visualizations.
       </p>
-      <a href="#" class="popup-explore-link" style="margin-top:1rem; display: inline-block;">Explore Now</a>
+      <a
+        href="#"
+        class="popup-explore-link"
+        style="margin-top: 1rem; display: inline-block"
+        >Explore Now</a
+      >
     </header>
     <!-- BODY WRAP -->
-    <div class="popup-body-grid" style="display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;">
+    <div
+      class="popup-body-grid"
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: space-between;
+      "
+    >
       <!-- Left Column: About + Features -->
-      <div class="popup-main-info" style="flex: 1 1 330px; min-width: 300px;">
+      <div
+        class="popup-main-info"
+        style="flex: 1 1 330px; min-width: 300px"
+      >
         <!-- ABOUT -->
         <section class="popup-section-bg">
           <h2>About the Project</h2>
           <p>
-            YouSentiment is a Flask-powered web app that analyzes YouTube
-            video comments to reveal audience emotions. Using the YouTube
-            Data API, TextBlob for sentiment analysis, and tools like
-            WordCloud and Matplotlib, it delivers stunning pie charts and
-            word clouds to visualize positive, negative, and neutral
-            sentiments.
+            YouSentiment is a Flask-powered web app that analyzes
+            YouTube video comments to reveal audience emotions. Using
+            the YouTube Data API, TextBlob for sentiment analysis, and
+            tools like WordCloud and Matplotlib, it delivers stunning
+            pie charts and word clouds to visualize positive, negative,
+            and neutral sentiments.
           </p>
         </section>
         <!-- FEATURES GRID -->
-        <section style="margin-top:2rem;">
+        <section style="margin-top: 2rem">
           <h2>Key Features</h2>
-          <div class="popup-features" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div
+            class="popup-features"
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 1rem;
+            "
+          >
             <div class="popup-feature-card">
               <h3>Sentiment Analysis</h3>
               <p>
-                Classifies comments as Positive, Negative, or Neutral using
-                TextBlob’s advanced polarity scoring.
+                Classifies comments as Positive, Negative, or Neutral
+                using TextBlob’s advanced polarity scoring.
               </p>
             </div>
             <div class="popup-feature-card">
               <h3>Visual Insights</h3>
               <p>
-                Showcases sentiment distribution with dynamic pie charts and
-                word clouds for key insights.
+                Showcases sentiment distribution with dynamic pie charts
+                and word clouds for key insights.
               </p>
             </div>
             <div class="popup-feature-card">
               <h3>Video Metadata</h3>
               <p>
-                Displays video title and thumbnail, pulled seamlessly from
-                the YouTube API.
+                Displays video title and thumbnail, pulled seamlessly
+                from the YouTube API.
               </p>
             </div>
             <div class="popup-feature-card">
               <h3>Easy Exploration</h3>
               <p>
-                Instantly explore results and insights for any public YouTube video.
+                Instantly explore results and insights for any public
+                YouTube video.
               </p>
             </div>
           </div>
         </section>
       </div>
       <!-- Right Column: Visualizations -->
-      <div class="popup-visual-section" style="flex:1 1 330px;min-width:300px;">
+      <div
+        class="popup-visual-section"
+        style="flex: 1 1 330px; min-width: 300px"
+      >
         <section class="popup-section-bg popup-showcase">
           <h2>Sample Visualizations</h2>
-          <div class="popup-gallery" style="display:flex;gap:1rem;">
+          <div class="popup-gallery" style="display: flex; gap: 1rem">
             <div>
-              <img src="assets/YouSentiment1.png" alt="Sentiment Pie Chart" style="max-width: 120px; border-radius:8px;"/>
-              <p style="text-align:center;font-size:0.95em;">Sentiment Distribution Pie Chart</p>
+              <img
+                src="assets/YouSentiment1.png"
+                alt="Sentiment Pie Chart"
+                style="max-width: 120px; border-radius: 8px"
+              />
+              <p style="text-align: center; font-size: 0.95em">
+                Sentiment Distribution Pie Chart
+              </p>
             </div>
             <div>
               <img
                 src="https://images.unsplash.com/photo-1516321310764-8d9c1f3e9317?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 alt="Word Cloud"
-                style="max-width: 120px; border-radius:8px;"
+                style="max-width: 120px; border-radius: 8px"
               />
-              <p style="text-align:center;font-size:0.95em;">Positive Comments Word Cloud</p>
+              <p style="text-align: center; font-size: 0.95em">
+                Positive Comments Word Cloud
+              </p>
             </div>
           </div>
-          <div class="popup-video" style="margin-top:1.5rem;text-align:center;">
-            <video controls style="max-width:90%;">
+          <div
+            class="popup-video"
+            style="margin-top: 1.5rem; text-align: center"
+          >
+            <video controls style="max-width: 90%">
               <source
                 src="https://www.w3schools.com/html/mov_bbb.mp4"
                 type="video/mp4"
               />
               Your browser does not support the video tag.
             </video>
-            <p style="text-align:center;font-size:0.95em;">Demo Video of YouSentiment</p>
+            <p style="text-align: center; font-size: 0.95em">
+              Demo Video of YouSentiment
+            </p>
           </div>
         </section>
       </div>
     </div>
-    
   </div>
 </div>
 
 
-<div class="project-popup-overlay" id="loanlens-popup">
+
+        <!-- pop up page for loanlens -->
+        <div class="project-popup-overlay" id="loanlens-popup">
+          <div class="project-popup-content">
+            <!-- Close Button (floating) -->
+            <button
+              class="popup-close-btn"
+              id="loanlens-popup-close-btn"
+              title="Close"
+            >
+              &times;
+            </button>
+            <!-- HERO SECTION -->
+            <header
+              class="popup-hero-bg"
+              style="text-align: center; padding-bottom: 2rem"
+            >
+              <h1 class="popup-title">LoanLens</h1>
+              <p class="popup-desc">
+                Predict loan eligibility instantly with machine learning.<br />
+                Upload data or try individual cases—smart, scalable, open
+                source.
+              </p>
+              <a
+                href="https://loanlens.onrender.com"
+                class="popup-explore-link"
+                target="_blank"
+                style="margin-top: 1rem; display: inline-block"
+                >Try Live Demo</a
+              >
+            </header>
+            <!-- BODY WRAP -->
+            <div
+              class="popup-body-grid"
+              style="
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2rem;
+                justify-content: space-between;
+              "
+            >
+              <!-- Left Column: About + Features -->
+              <div
+                class="popup-main-info"
+                style="flex: 1 1 330px; min-width: 300px"
+              >
+                <!-- ABOUT -->
+                <section class="popup-section-bg">
+                  <h2>About the Project</h2>
+                  <p>
+                    LoanLens is a web-based tool that predicts whether a loan
+                    applicant is eligible using a trained machine learning
+                    model. Designed for individuals and institutions, it brings
+                    a robust, accurate, and intuitive workflow for rapid credit
+                    screening using real-world datasets.
+                    <br />
+                    <span style="color: #98ec8a">Tech Stack:</span>
+                    Flask, Python, Pandas, Scikit-learn, Tailwind CSS, GitHub,
+                    Render.
+                  </p>
+                </section>
+                <!-- FEATURES GRID -->
+                <section style="margin-top: 2rem">
+                  <h2>Key Features</h2>
+                  <div
+                    class="popup-features"
+                    style="
+                      display: grid;
+                      grid-template-columns: 1fr 1fr;
+                      gap: 1rem;
+                    "
+                  >
+                    <div class="popup-feature-card">
+                      <h3>Batch Prediction</h3>
+                      <p>
+                        Upload a CSV dataset (loan-test.csv) and get eligibility
+                        predictions for each applicant in seconds.
+                      </p>
+                    </div>
+                    <div class="popup-feature-card">
+                      <h3>Single Applicant Form</h3>
+                      <p>
+                        Enter an applicant's details and instantly receive a
+                        prediction—eligible or not eligible.
+                      </p>
+                    </div>
+                    <div class="popup-feature-card">
+                      <h3>Model Insights</h3>
+                      <p>
+                        See real-time model performance: accuracy, precision,
+                        recall, F1-score, and balanced reporting.
+                      </p>
+                    </div>
+                    <div class="popup-feature-card">
+                      <h3>Modern Web UI</h3>
+                      <p>
+                        Clean, card-based layout, responsive design, and
+                        color-coded results—accessible on all devices.
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <!-- Right Column: Visualizations / Sample UI Demo -->
+              <div
+                class="popup-visual-section"
+                style="flex: 1 1 330px; min-width: 300px"
+              >
+                <section class="popup-section-bg popup-showcase">
+                  <h2>Sample Screens & Visualizations</h2>
+                  <div class="popup-gallery" style="display: flex; gap: 1.2rem">
+                    <div>
+                      <img
+                        src="https://raw.githubusercontent.com/JAYDEEP1171/LoanLens/main/screenshots/loans_form.png"
+                        alt="Single Applicant Prediction Form"
+                        style="max-width: 140px; border-radius: 8px"
+                      />
+                      <p style="text-align: center; font-size: 0.95em">
+                        Single Applicant Form
+                      </p>
+                    </div>
+                    <div>
+                      <img
+                        src="https://raw.githubusercontent.com/JAYDEEP1171/LoanLens/main/screenshots/batch_upload.png"
+                        alt="Batch Upload Table"
+                        style="max-width: 140px; border-radius: 8px"
+                      />
+                      <p style="text-align: center; font-size: 0.95em">
+                        Batch Prediction Results
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="popup-video"
+                    style="margin-top: 1.5rem; text-align: center"
+                  >
+                    <video controls style="max-width: 90%">
+                      <source
+                        src="https://www.w3schools.com/html/movie.mp4"
+                        type="video/mp4"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                    <p style="text-align: center; font-size: 0.95em">
+                      Demo Video: Predicting Loan Eligibility
+                    </p>
+                  </div>
+                  <div style="text-align: center; margin-top: 1.2em">
+                    <a
+                      href="https://github.com/JAYDEEP1171/LoanLens"
+                      target="_blank"
+                      class="popup-explore-link"
+                      >View on GitHub</a
+                    >
+                  </div>
+                </section>
+              </div>
+            </div>
+            <footer class="popup-footer" style="margin-top: 2rem">
+              <p>
+                Crafted using Flask, Scikit-learn, Tailwind CSS, and Render.<br />
+                <span style="color: #83f497"
+                  >© 2025 LoanLens &nbsp;|&nbsp; Author: Jaydeep</span
+                >
+              </p>
+            </footer>
+          </div>
+        </div>
+
+
+<!-- pop up page for calibrate -->
+
+<div class="project-popup-overlay" id="image-processing-popup">
   <div class="project-popup-content">
     <!-- Close Button (floating) -->
-    <button class="popup-close-btn" id="loanlens-popup-close-btn" title="Close">
-      &times;
+    <button
+      class="popup-close-btn"
+      id="image-processing-popup-close-btn"
+      title="Close"
+    >
+      ×
     </button>
     <!-- HERO SECTION -->
-    <header class="popup-hero-bg" style="text-align:center; padding-bottom:2rem;">
-      <h1 class="popup-title">LoanLens</h1>
+    <header
+      class="popup-hero-bg"
+      style="text-align: center; padding-bottom: 2rem"
+    >
+      <h1 class="popup-title">Real-time Image Processing & Measurement</h1>
       <p class="popup-desc">
-        Predict loan eligibility instantly with machine learning.<br>
-        Upload data or try individual cases—smart, scalable, open source.
+        Automate precise measurements of small-scale objects (1-10 mm) in real-time<br />
+        using industrial camera feeds, built for industrial automation.
       </p>
-      <a href="https://loanlens.onrender.com" class="popup-explore-link" target="_blank" style="margin-top:1rem; display: inline-block;">Try Live Demo</a>
+      <a
+        href="#"
+        class="popup-explore-link"
+        target="_blank"
+        style="margin-top: 1rem; display: inline-block"
+        >View Project Details</a
+      >
     </header>
     <!-- BODY WRAP -->
-    <div class="popup-body-grid" style="display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;">
+    <div
+      class="popup-body-grid"
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: space-between;
+      "
+    >
       <!-- Left Column: About + Features -->
-      <div class="popup-main-info" style="flex: 1 1 330px; min-width: 300px;">
+      <div
+        class="popup-main-info"
+        style="flex: 1 1 330px; min-width: 300px"
+      >
         <!-- ABOUT -->
         <section class="popup-section-bg">
           <h2>About the Project</h2>
           <p>
-            LoanLens is a web-based tool that predicts whether a loan applicant is eligible 
-            using a trained machine learning model.
-            Designed for individuals and institutions, it brings a robust, accurate, and 
-            intuitive workflow for rapid credit screening using real-world datasets.
-            <br>
-            <span style="color:#98ec8a;">Tech Stack:</span>
-            Flask, Python, Pandas, Scikit-learn, Tailwind CSS, GitHub, Render.
+            Developed at Lycka Infolab Pvt Ltd, this standalone application uses computer vision to measure small objects (1-10 mm) in real-time via industrial camera feeds. Delivered as a Windows executable, it offers a user-friendly GUI and precise measurements (±0.1 mm) for industrial quality control.
+            <br />
+            <span style="color: #98ec8a">Tech Stack:</span>
+            Python, OpenCV, Tkinter, DVP SDK, PyInstaller, NumPy, Openpyxl.
           </p>
         </section>
         <!-- FEATURES GRID -->
-        <section style="margin-top:2rem;">
+        <section style="margin-top: 2rem">
           <h2>Key Features</h2>
-          <div class="popup-features" style="display: grid; grid-template-columns:1fr 1fr; gap:1rem;">
+          <div
+            class="popup-features"
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 1rem;
+            "
+          >
             <div class="popup-feature-card">
-              <h3>Batch Prediction</h3>
+              <h3>Real-time Measurement</h3>
               <p>
-                Upload a CSV dataset (loan-test.csv) and get eligibility predictions for each applicant in seconds.
+                Measures objects (1-10 mm) with ±0.1 mm accuracy using live camera feeds at 29 FPS.
               </p>
             </div>
             <div class="popup-feature-card">
-              <h3>Single Applicant Form</h3>
+              <h3>User-friendly GUI</h3>
               <p>
-                Enter an applicant's details and instantly receive a prediction—eligible or not eligible.
+                Tkinter-based interface with adjustable lines, points, and controls for calibration and measurement.
               </p>
             </div>
             <div class="popup-feature-card">
-              <h3>Model Insights</h3>
+              <h3>Calibration System</h3>
               <p>
-                See real-time model performance: accuracy, precision, recall, F1-score, and balanced reporting.
+                Calculates scale factor (mm/pixel) from user-defined points for precise real-world measurements.
               </p>
             </div>
             <div class="popup-feature-card">
-              <h3>Modern Web UI</h3>
+              <h3>File Management</h3>
               <p>
-                Clean, card-based layout, responsive design, and color-coded results—accessible on all devices.
+                Saves snapshots (JPG), videos (AVI), and Excel reports with measurement data.
               </p>
             </div>
           </div>
         </section>
       </div>
       <!-- Right Column: Visualizations / Sample UI Demo -->
-      <div class="popup-visual-section" style="flex:1 1 330px;min-width:300px;">
+      <div
+        class="popup-visual-section"
+        style="flex: 1 1 330px; min-width: 300px"
+      >
         <section class="popup-section-bg popup-showcase">
           <h2>Sample Screens & Visualizations</h2>
-          <div class="popup-gallery" style="display:flex;gap:1.2rem;">
+          <div class="popup-gallery" style="display: flex; gap: 1.2rem">
             <div>
-              <img src="https://raw.githubusercontent.com/JAYDEEP1171/LoanLens/main/screenshots/loans_form.png" alt="Single Applicant Prediction Form" style="max-width:140px; border-radius:8px;"/>
-              <p style="text-align:center;font-size:0.95em;">Single Applicant Form</p>
+              <img
+                src="https://placehold.co/140x100/2563eb/eee?text=GUI+Interface"
+                alt="Real-time Image Processing GUI"
+                style="max-width: 140px; border-radius: 8px"
+              />
+              <p style="text-align: center; font-size: 0.95em">
+                Real-time GUI Interface
+              </p>
             </div>
             <div>
-              <img src="https://raw.githubusercontent.com/JAYDEEP1171/LoanLens/main/screenshots/batch_upload.png" alt="Batch Upload Table" style="max-width:140px; border-radius:8px;"/>
-              <p style="text-align:center;font-size:0.95em;">Batch Prediction Results</p>
+              <img
+                src="https://placehold.co/140x100/2563eb/eee?text=Measurement+Output"
+                alt="Measurement Output Display"
+                style="max-width: 140px; border-radius: 8px"
+              />
+              <p style="text-align: center; font-size: 0.95em">
+                Measurement Output
+              </p>
             </div>
           </div>
-          <div class="popup-video" style="margin-top:1.5rem;text-align:center;">
-            <video controls style="max-width:90%;">
+          <div
+            class="popup-video"
+            style="margin-top: 1.5rem; text-align: center"
+          >
+            <video controls style="max-width: 90%">
               <source
                 src="https://www.w3schools.com/html/movie.mp4"
                 type="video/mp4"
               />
               Your browser does not support the video tag.
             </video>
-            <p style="text-align:center;font-size:0.95em;">Demo Video: Predicting Loan Eligibility</p>
+            <p style="text-align: center; font-size: 0.95em">
+              Demo Video: Real-time Measurement
+            </p>
           </div>
-          <div style="text-align:center; margin-top:1.2em;">
-            <a href="https://github.com/JAYDEEP1171/LoanLens" target="_blank" class="popup-explore-link">View on GitHub</a>
+          <div style="text-align: center; margin-top: 1.2em">
+            <a
+              href="#"
+              target="_blank"
+              class="popup-explore-link"
+              >View Project Details</a
+            >
           </div>
         </section>
       </div>
     </div>
-    <footer class="popup-footer" style="margin-top:2rem;">
+    <footer class="popup-footer" style="margin-top: 2rem">
       <p>
-        Crafted using Flask, Scikit-learn, Tailwind CSS, and Render.<br>
-        <span style="color:#83f497;">© 2025 LoanLens &nbsp;|&nbsp; Author: Jaydeep</span>
+        Crafted using Python, OpenCV, Tkinter, and PyInstaller.<br />
+        <span style="color: #83f497"
+          >© 2025 Real-time Image Processing  |  Author: Jaydip Gohil</span
+        >
       </p>
     </footer>
   </div>
 </div>
+
+
+
+
+<!-- actual project cards -->
 
         <h2>My Projects</h2>
         <div class="projects-underline"></div>
@@ -908,14 +1185,14 @@
           <h3>YouTube Comments Sentiment Analysis Tool</h3>
           <p>
             Developed a Python-based tool to analyze and visualize sentiments in
-            YouTube video comments, 
+            YouTube video comments,
           </p>
           <p>
             <strong>Technologies:</strong> Python, YouTube Data API, TextBlob,
             Matplotlib, WordCloud, FPDF
           </p>
-          
-          <button onclick="openProjectPopup()" class="btn cta-glow">View Project</button>
+
+          <button class="btn cta-glow" data-popup="yousentiment-popup">View Project</button>
         </div>
         <div class="project-card">
           <div class="project-img">
@@ -937,47 +1214,33 @@
             Seaborn
           </p>
           <!-- <a href="projects/LoanLens.html" class="btn cta-glow">View Project</a> -->
-          <button onclick="showLoanLensPopup()" class="btn cta-glow">View LoanLens Project</button>
+          <button class="btn cta-glow" data-popup="loanlens-popup">View Project</button>
+            
         </div>
         <div class="project-card">
           <div class="project-img">
             <img
-              src="https://placehold.co/480x200/2563eb/eee?text=Project+Image"
-              alt="Object Detection screenshot"
+              src="assets/calibrologo.png"
+              alt="Real-time Image Processing screenshot"
             />
           </div>
           <div class="project-top">
-            <span class="project-badge">CV</span>
+            <span class="project-badge">Computer Vision</span>
           </div>
-          <h3>Real-time Object Detection & Measurement</h3>
+          <h3>Real-time Image Processing & Measurement</h3>
           <p>
-            Created a computer vision system for detecting and measuring
-            small-scale objects in real-time, with applications in industrial
-            automation.
+            Developed a standalone system for real-time measurement of
+            small-scale objects (1-10 mm) using industrial camera feeds,
+            enhancing precision in industrial automation.
           </p>
-          <p><strong>Technologies:</strong> Python, OpenCV</p>
-          <a href="#" class="btn cta-glow">View Project</a>
-        </div>
-        <div class="project-card">
-          <div class="project-img">
-            <img
-              src="https://placehold.co/480x200/2563eb/eee?text=Project+Image"
-              alt="Image Stitching screenshot"
-            />
-          </div>
-          <div class="project-top">
-            <span class="project-badge">CV</span>
-          </div>
-          <h3>AI-Powered Image Stitching System</h3>
           <p>
-            Built a real-time image stitching pipeline to combine multiple
-            camera inputs into a seamless linear output, useful for panoramic
-            imaging.
+            <strong>Technologies:</strong> Python, OpenCV, Tkinter, DVP SDK,
+            PyInstaller
           </p>
-          <p><strong>Technologies:</strong> Python, OpenCV</p>
-          <a href="#" class="btn cta-glow">View Project</a>
+          
+          <button class="btn cta-glow" data-popup="image-processing-popup">View Project</button>
         </div>
-      </div>
+        
     </section>
 
     <section
@@ -1034,41 +1297,46 @@
     </section>
 
     <section
-  id="certifications"
-  class="certifications-main certifications-glass fadein-section visible"
-  tabindex="0"
-  aria-label="Certifications"
->
-  <div class="certifications-header">
-    <span class="cert-icon" aria-hidden="true">🎓</span>
-    <h2>Certifications</h2>
-    <div class="cert-underline"></div>
-  </div>
-  <div class="cert-cards-container">
-    <div class="cert-card" data-cert-image="assets/alpha.jpg">
-      <div class="cert-card-title">Java + DSA</div>
-      <div class="cert-card-org">Apna College</div>
-      <div class="cert-card-date">Oct 2023</div>
-    </div>
-    <div class="cert-card" data-cert-image="assets/lycka.jpg">
-      <div class="cert-card-title">Web Animation</div>
-      <div class="cert-card-org">Developer Student Club</div>
-      <div class="cert-card-date">Jun 2023</div>
-    </div>
-    <div class="cert-card" data-cert-image="assets/sap.jpg">
-      <div class="cert-card-title">Emerging Technologies in AI & ML</div>
-      <div class="cert-card-org">Edunet</div>
-      <div class="cert-card-date">Aug 2024</div>
-    </div>
-  </div>
-  <div id="cert-popup" class="cert-popup" style="display: none;">
-    <div class="popup-content">
-      <span class="close-popup">×</span>
-      <img id="cert-image" src="" alt="Certificate" style="display: none;">
-      <div id="error-message" style="display: none; color: white; text-align: center;">Failed to load certificate image.</div>
-    </div>
-  </div>
-</section>
+      id="certifications"
+      class="certifications-main certifications-glass fadein-section visible"
+      tabindex="0"
+      aria-label="Certifications"
+    >
+      <div class="certifications-header">
+        <span class="cert-icon" aria-hidden="true">🎓</span>
+        <h2>Certifications</h2>
+        <div class="cert-underline"></div>
+      </div>
+      <div class="cert-cards-container">
+        <div class="cert-card" data-cert-image="assets/alpha.jpg">
+          <div class="cert-card-title">Java + DSA</div>
+          <div class="cert-card-org">Apna College</div>
+          <div class="cert-card-date">Oct 2023</div>
+        </div>
+        <div class="cert-card" data-cert-image="assets/lycka.jpg">
+          <div class="cert-card-title">Web Animation</div>
+          <div class="cert-card-org">Developer Student Club</div>
+          <div class="cert-card-date">Jun 2023</div>
+        </div>
+        <div class="cert-card" data-cert-image="assets/sap.jpg">
+          <div class="cert-card-title">Emerging Technologies in AI & ML</div>
+          <div class="cert-card-org">Edunet</div>
+          <div class="cert-card-date">Aug 2024</div>
+        </div>
+      </div>
+      <div id="cert-popup" class="cert-popup" style="display: none">
+        <div class="popup-content">
+          <span class="close-popup">×</span>
+          <img id="cert-image" src="" alt="Certificate" style="display: none" />
+          <div
+            id="error-message"
+            style="display: none; color: white; text-align: center"
+          >
+            Failed to load certificate image.
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Contact Section -->
     <section

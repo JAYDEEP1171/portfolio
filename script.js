@@ -122,48 +122,48 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("There was an error sending your message. Please try again later.");
     }
   });
-});
 
-// Open popup: call openProjectPopup()
-function openProjectPopup() {
-  document.getElementById('project-popup').classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-// Close by button or overlay click
-document.getElementById('popup-close-btn').onclick = closeProjectPopup;
-document.getElementById('project-popup').onclick = function(e) {
-  if (e.target === this) closeProjectPopup();
-};
-function closeProjectPopup() {
-  document.getElementById('project-popup').classList.remove('active');
-  document.body.style.overflow = '';
-}
+  // Project Popup Handling
+  document.querySelectorAll('[data-popup]').forEach(button => {
+    button.addEventListener('click', () => {
+      const popupId = button.getAttribute('data-popup');
+      const popup = document.getElementById(popupId);
+      if (popup) {
+        // Close any open popup
+        document.querySelectorAll('.project-popup-overlay').forEach(openPopup => {
+          openPopup.classList.remove('active');
+        });
+        // Open the target popup
+        popup.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scroll
+      } else {
+        console.error(`Popup with ID ${popupId} not found`);
+      }
+    });
+  });
 
-// Show the LoanLens popup
-function showLoanLensPopup() {
-  document.getElementById('loanlens-popup').classList.add('active');
-  document.body.style.overflow = 'hidden'; // Prevent background scroll
-}
+  // Handle close button clicks for all popups
+  document.querySelectorAll('.popup-close-btn').forEach(closeBtn => {
+    closeBtn.addEventListener('click', () => {
+      const popup = closeBtn.closest('.project-popup-overlay');
+      if (popup) {
+        popup.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scroll
+      }
+    });
+  });
 
-// Hide the LoanLens popup
-function hideLoanLensPopup() {
-  document.getElementById('loanlens-popup').classList.remove('active');
-  document.body.style.overflow = ''; // Restore scroll
-}
+  // Handle overlay clicks to close popups
+  document.querySelectorAll('.project-popup-overlay').forEach(popup => {
+    popup.addEventListener('click', (e) => {
+      if (e.target === popup) {
+        popup.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scroll
+      }
+    });
+  });
 
-// Handle close button
-document.getElementById('loanlens-popup-close-btn').addEventListener('click', hideLoanLensPopup);
-
-// Optional: close when user clicks outside modal content
-document.getElementById('loanlens-popup').addEventListener('click', function (e) {
-  if (e.target === this) {
-    hideLoanLensPopup();
-  }
-});
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
+  // Certificate Popup Handling
   const certCards = document.querySelectorAll('.cert-card');
   const certPopup = document.getElementById('cert-popup');
   const certImage = document.getElementById('cert-image');
@@ -205,12 +205,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Handle Escape key for both certificate and project popups
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && certPopup.style.display === 'flex') {
-      certPopup.style.display = 'none';
-      certImage.src = '';
-      certImage.style.display = 'none';
-      errorMessage.style.display = 'none';
+    if (e.key === 'Escape') {
+      // Certificate popup
+      if (certPopup.style.display === 'flex') {
+        certPopup.style.display = 'none';
+        certImage.src = '';
+        certImage.style.display = 'none';
+        errorMessage.style.display = 'none';
+      }
+      // Project popups
+      document.querySelectorAll('.project-popup-overlay.active').forEach(popup => {
+        popup.classList.remove('active');
+        document.body.style.overflow = '';
+      });
     }
   });
 });

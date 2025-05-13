@@ -1776,6 +1776,7 @@ nav.scrolled {
   border: 2px solid #295e31;
   color: #fff;
   width: 1200px;
+  height: 600px;
   max-width: 98vw;
   max-height: 95vh;
   min-width: 340px;
