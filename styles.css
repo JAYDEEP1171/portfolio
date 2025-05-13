@@ -1759,38 +1759,40 @@ nav.scrolled {
   inset: 0;
   z-index: 1310;
   display: none;
-  justify-content: center !important;
-  align-items: center !important;
-  background: #142816; /* SOLID deep green */
-  transition: background .3s;
+  justify-content: center;
+  align-items: center;
+  background: #142816;
+  transition: background 0.3s;
+  overflow: auto; /* Important: allows modal content to scroll if taller than screen */
 }
+
 
 .project-popup-overlay.active {
   display: flex !important;
 }
 
 .project-popup-content {
-  background: #192c1a; /* SOLID dark green background */
+  background: #192c1a;
   border-radius: 22px;
   box-shadow: 0 8px 40px #0f221544;
   border: 2px solid #295e31;
   color: #fff;
-  width: 1200px;
-  height: 600px;
-  max-width: 98vw;
-  max-height: 95vh;
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  max-height: 90vh; /* key for preventing cutoff */
   min-width: 340px;
   overflow-y: auto;
   overflow-x: hidden;
   padding: 0 0 1.2em 0;
   position: relative;
-  animation: project-popup-in .35s cubic-bezier(.48,1.99,.57,.99);
+  animation: project-popup-in 0.35s cubic-bezier(0.48, 1.99, 0.57, 0.99);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-  margin: 0; /* So modal is always centered */
+  margin: 2rem auto; /* key fix: adds breathing room vertically */
 }
+
+
 
 @keyframes project-popup-in {
   from { transform: translateY(-30px) scale(.98); opacity: 0;}
